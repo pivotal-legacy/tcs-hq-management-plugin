@@ -1,0 +1,8 @@
+Bundle-SymbolicName: com.springsource.hq.plugin.tcserver.cli.client
+Bundle-Name: SpringSource tc Server Web Client
+Bundle-Vendor: SpringSource Inc
+Bundle-ManifestVersion: 2
+Import-Template: 
+ javax.xml.bind.*;version="[2.0.0, 3.0.0)",
+ org.hyperic.hq.hqapi1.*;version="[3.2.5,4.0.0)",
+ org.apache.commons.lang.*;version="[2.0.0,3.0.0)"

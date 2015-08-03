@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="package-top-level" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+<!-- Main targets -->
+	<target name="package" depends="package.tcserver.plugin, package.open.source.source"
+			description="Creates a packaged distributable of the project."/>
+
+<!-- Other targets -->
+	<target name="package.tcserver.plugin" depends="ivy.init" description="Creates a packaged distributable of the project.">
+		<delete dir="${package.output.dir}" quiet="true"/>
+		<mkdir dir="${package.output.dir}"/>
+
+		<copy todir="${package.output.dir}" failonerror="false" overwrite="true">
+			<fileset dir="${basedir}/resources"/>
+			<filterset>
+				<filter token="bundle.version" value="${bundle.version}"/>
+			</filterset>
+			<firstmatchmapper>
+				<globmapper from="licenses/open_source_licenses-tc-server-hq-plugin.txt" to="licenses/open_source_licenses-tc-server-hq-plugin-${bundle.version}.txt"/>
+				<identitymapper/>
+			</firstmatchmapper>
+		</copy>
+
+		<ivy:retrieve resolveId="webapp.classpath" organisation="com.springsource.hq.plugin.tcserver"
+				module="com.springsource.hq.plugin.tcserver.serverconfig.web" revision="latest.integration"
+				conf="runtime" type="war" inline="true" transitive="false" log="download-only"
+				pattern="${package.dist.dir}/tomcatserverconfig.[ext]"/>
+
+		<ivy:retrieve resolveId="plugin.classpath" organisation="com.springsource.hq.plugin.tcserver"
+				module="springsource-tcserver-plugin" revision="latest.integration"
+				conf="runtime" type="jar" inline="true" transitive="false" log="download-only"
+				pattern="${package.dist.dir}/ROOT/WEB-INF/hq-plugins/[artifact].[ext]"/>
+
+		<path id="hqu">
+			<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tcserverclient"/>
+			<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tomcatappmgmt"/>
+			<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tomcatserverconfig"/>
+		</path>
+
+		<all-bundles target="package" buildpathRef="hqu">
+			<property name="hqu.dir" value="${package.dist.dir}/ROOT/hqu"/>
+		</all-bundles>
+
+		<ant dir="${basedir}/../tcserver-plugin-reference" target="package">
+			<property name="output.dir" value="${package.dist.dir}/ROOT/ui_docs/DOC"/>
+		</ant>
+
+		<fixcrlf srcdir="${package.output.dir}" eol="lf" eof="remove" encoding="ISO-8859-1">
+			<include name="**/*.sh" />
+		</fixcrlf>
+		<fixcrlf srcdir="${package.output.dir}" eol="crlf" eof="remove" encoding="ISO-8859-1">
+			<include name="**/*.bat" />
+		</fixcrlf>
+
+		<chmod perm="755">
+			<fileset dir="${package.output.dir}">
+				<include name="**/*.sh"/>
+			</fileset>
+		</chmod>
+
+		<zip destfile="${package.output.file}">
+			<zipfileset dir="${package.dir}" includes="${package.basename}/**/*.sh" filemode="755"/>
+			<zipfileset dir="${package.dir}" includes="${package.basename}/**" excludes="${package.basename}/**/*.sh"/>
+		</zip>
+	</target>
+
+	<target name="package.open.source.source">
+		<local name="alt.package.basename"/>
+		<property name="alt.package.basename" value="${natural.name}-open-source-source-${bundle.version}"/>
+		<local name="alt.package.output.dir"/>
+		<property name="alt.package.output.dir" value="${package.dir}/${alt.package.basename}"/>
+		<local name="alt.package.output.file"/>
+		<property name="alt.package.output.file" value="${artifacts.dir}/${alt.package.basename}.tar.gz"/>
+
+		<delete dir="${alt.package.output.dir}" quiet="true"/>
+		<mkdir dir="${alt.package.output.dir}"/>
+		<delete file="${alt.package.output.file}" quiet="true"/>
+		<mkdir dir="${artifacts.dir}"/>
+
+		<property file="${basedir}/../build.versions"/>
+
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.javax.xml.stream.path"
+				org="javax.xml.stream" name="com.springsource.javax.xml.stream" rev="${javax.xml.stream}"/>
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.javax.activation.path"
+				org="javax.activation" name="com.springsource.javax.activation" rev="${javax.activation}"/>
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.javax.xml.bind"
+				org="javax.xml.bind" name="com.springsource.javax.xml.bind" rev="${javax.xml.bind}"/>
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.javax.annotation.path"
+				org="javax.annotation" name="com.springsource.javax.annotation" rev="${javax.annotation}"/>
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.org.apache.taglibs.standard.path"
+				org="org.apache.taglibs" name="com.springsource.org.apache.taglibs.standard" rev="${org.apache.taglibs}"/>
+		<get.source output.dir="${alt.package.output.dir}" path.id="com.springsource.org.jvnet.staxex.path"
+				org="org.jvnet.staxex" name="com.springsource.org.jvnet.staxex" rev="1.0.0"/>
+
+		<tar destfile="${alt.package.output.file}" compression="gzip" longfile="gnu">
+			<tarfileset dir="${package.dir}" includes="${alt.package.basename}/**"/>
+		</tar>
+	</target>
+
+<!-- Macros -->
+	<macrodef name="get.source">
+		<attribute name="path.id"/>
+		<attribute name="org"/>
+		<attribute name="name"/>
+		<attribute name="rev"/>
+		<attribute name="output.dir"/>
+		<sequential>
+			<ivy:cachepath resolveId="@{path.id}" pathid="@{path.id}" organisation="@{org}" module="@{name}"
+					revision="@{rev}" type="src" inline="true" log="download-only"/>
+			<unjar dest="@{output.dir}">
+				<path refid="@{path.id}"/>
+				<globmapper from="*" to="@{org}-@{name}-@{rev}/*"/>
+			</unjar>
+		</sequential>
+	</macrodef>
+
+</project>

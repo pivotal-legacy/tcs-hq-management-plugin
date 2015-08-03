@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="Operation">
+		<xs:restriction base="xs:string">
+			<!-- Platform operations -->
+			<xs:enumeration value="createPlatform" />
+			<xs:enumeration value="modifyPlatform" />
+			<xs:enumeration value="removePlatform" />
+			<xs:enumeration value="addServer" />
+			<xs:enumeration value="viewPlatform" />
+			<xs:enumeration value="monitorPlatform" />
+			<xs:enumeration value="controlPlatform" />
+			<xs:enumeration value="managePlatformAlerts" />
+			<!-- Server operations -->
+			<xs:enumeration value="createServer" />
+			<xs:enumeration value="modifyServer" />
+			<xs:enumeration value="removeServer" />
+			<xs:enumeration value="addService" />
+			<xs:enumeration value="viewServer" />
+			<xs:enumeration value="monitorServer" />
+			<xs:enumeration value="controlServer" />
+			<xs:enumeration value="manageServerAlerts" />
+			<!-- Service operations -->
+			<xs:enumeration value="createService" />
+			<xs:enumeration value="modifyService" />
+			<xs:enumeration value="removeService" />
+			<xs:enumeration value="viewService" />
+			<xs:enumeration value="monitorService" />
+			<xs:enumeration value="controlService" />
+			<xs:enumeration value="manageServiceAlerts" />
+			<!-- Application operations -->
+			<xs:enumeration value="createApplication" />
+			<xs:enumeration value="modifyApplication" />
+			<xs:enumeration value="removeApplication" />
+			<xs:enumeration value="viewApplication" />
+			<xs:enumeration value="monitorApplication" />
+			<xs:enumeration value="controlApplication" />
+			<xs:enumeration value="manageApplicationAlerts" />
+			<!-- Group operations -->
+			<xs:enumeration value="createResourceGroup" />
+			<xs:enumeration value="viewResourceGroup" />
+			<xs:enumeration value="manageGroupAlerts" />
+			<xs:enumeration value="modifyResourceGroup" />
+			<xs:enumeration value="addRole" />
+			<xs:enumeration value="removeResourceGroup" />
+			<xs:enumeration value="controlResourceGroup" />
+			<xs:enumeration value="monitorResourceGroup" />
+			<!-- Role ops -->
+			<xs:enumeration value="viewRole" />
+			<xs:enumeration value="createRole" />
+			<xs:enumeration value="modifyRole" />
+			<xs:enumeration value="removeRole" />
+			<!-- Subject ops -->
+			<xs:enumeration value="viewSubject" />
+			<xs:enumeration value="modifySubject" />
+			<xs:enumeration value="removeSubject" />
+			<xs:enumeration value="createSubject" />
+			<!-- Admin op -->
+			<xs:enumeration value="administerCAM" />
+			<!-- Escalation opts -->
+			<xs:enumeration value="createEscalation" />
+			<xs:enumeration value="modifyEscalation" />
+			<xs:enumeration value="removeEscalation" />
+			<xs:enumeration value="viewEscalation" />
+			<!-- Resource ops -->
+			<xs:enumeration value="createResource" />
+			<xs:enumeration value="modifyResourceType" />
+			<!-- Operation ops -->
+			<xs:enumeration value="addOperation" />
+			<xs:enumeration value="removeOperation" />
+			<!-- Policy ops -->
+			<xs:enumeration value="viewPolicy" />
+			<xs:enumeration value="createPolicy" />
+			<xs:enumeration value="modifyPolicy" />
+			<xs:enumeration value="removePolicy" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

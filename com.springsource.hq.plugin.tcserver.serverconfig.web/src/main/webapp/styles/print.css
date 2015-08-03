@@ -1,0 +1,63 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+/* White background, black text, arial font, decent font size */
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+	font-size: 10pt;
+	width: 100%;
+}
+
+/* Change the layout to remove columns */
+html body {
+	background: transparent;
+	width: auto;
+}
+
+#main,#container {
+	width: 100%;
+}
+
+#page {
+	margin: 0;
+	width: 90%;
+}
+
+#content {
+	margin: 0;
+	overflow: visible;
+}
+
+/* Hide header and nav elements */
+#header,#primary-navigation,#secondary-navigation,#footer-wrapper {
+	visibility: hidden;
+	display: none;
+}
+
+/* Style links */
+a:link,a:visited {
+	color: #520;
+	background: transparent;
+	text-decoration: underline !important;
+}
+
+/* Remove table header graphic */
+.bordered-table th {
+	background-image: none;
+}

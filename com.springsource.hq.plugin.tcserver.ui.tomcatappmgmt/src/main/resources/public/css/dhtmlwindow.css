@@ -1,0 +1,74 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+.dhtmlwindow{
+position: absolute;
+border: 1px solid #b8c885;
+visibility: hidden;
+background-color: white;
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+padding: 1px;
+text-indent: 3px;
+font: bold 14px Arial;
+background-color: #007c00;
+color: white;
+cursor: move;
+overflow: hidden;
+width: auto;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+}
+
+.drag-handle .drag-controls{ /*CSS for controls (min, close etc) within Drag Handle*/
+position: absolute;
+right: 1px;
+top: 2px;
+cursor: hand;
+cursor: pointer;
+}
+
+* html .drag-handle{ /*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+width: 100%;
+}
+
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+border-top: 1px solid brown;
+background-color: white;
+color: black;
+height: 150px;
+padding: 2px;
+overflow: auto;
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+border-top: 1px solid gray;
+background-color: #F8F8F8;
+height: 13px; /*height of resize image*/
+}
+
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+float: right;
+width: 13px; /*width of resize image*/
+height: 13px; /*height of resize image*/
+cursor: nw-resize;
+font-size: 0;
+}

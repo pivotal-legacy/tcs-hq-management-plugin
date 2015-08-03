@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+######################################
+#
+# This script is used to regenerate 
+# .classpath files based on build.versions 
+# combined with ivy.xml
+#
+# It only needs to be run if changes are
+# made to ivy.xml or build.versions
+#
+#####################################
+
+from __future__ import with_statement
+
+import os
+import os.path
+
+props = {}
+
+with open("build.versions") as f:
+    for line in f.readlines():
+        if "=" in line:
+            parts = line.split("=")
+            props[parts[0]] = parts[1].strip()
+
+for key in props.keys():
+    print "%s => %s" % (key, props[key])
+ 
+for root, dirs, files in os.walk("."):
+    if "ivy.xml" in files and ".classpath" in files:
+        print "=============="
+        print "%s appears to have ivy.xml and .classpath" % root
+        versions = {}
+        with open(os.path.join(root, "ivy.xml")) as f:
+            for line in f.readlines():
+                for key in props.keys():
+                    if key in line:
+                        print line.strip()
+                        # Parse this: <dependency org="org.apache.juli" name="com.springsource.org.apache.juli" rev="${tomcat-fork.6.version}" conf="provided->runtime"/>
+                        parts = line.lstrip().split(" ") # strip out any left-hanging spaces or tabs, then split on the spaces between each XML attribute
+
+                        # For each attribute, split on the '=' and then strip off the left and right quotes
+                        org = parts[1].split("=")[-1][1:-1] 
+                        name = parts[2].split("=")[-1][1:-1]
+
+                        # First grab the rev from the ivy entry. Then check if it's in the build.versions file, and replace if needed.
+                        rev = parts[3].split("=")[-1][1:-1]
+                        if key in rev:
+                            rev = props[key] 
+                        print "Parsed org=%s name=%s rev=%s" % (org, name, rev)
+                        versions[(org, name)] = (org, name, rev, key)
+			
+                        # And generate: <classpathentry kind="var" path="IVY_CACHE/org.apache.juli/com.springsource.org.apache.juli/6.0.36.B.CI-80/com.springsource.org.apache.juli-6.0.36.B.CI-80.jar" sourcepath="IVY_CACHE/org.apache.juli/com.springsource.org.apache.juli/6.0.36.B.CI-80/com.springsource.org.apache.juli-sources-6.0.36.B.CI-80.jar"/>
+                        #print 'Add this to your .classpath: <classpathentry kind="var" path="IVY_CACHE/%s/%s/%s/%s-%s.jar" sourcepath="IVY_CACHE/%s/%s/%s/%s-sources-%s.jar"/>' % (org, name, rev, name, rev, org, name, rev, name, rev)
+
+        print "Tabulated %s" % str(versions)
+
+        with open(os.path.join(root, ".classpath")) as input:
+            with open(os.path.join(root, ".classpath.new"), "w") as out:
+                for line in input.readlines():
+                    if "IVY_CACHE" in line:
+                        for version_key in versions.keys():
+                            org, name, rev, key = versions[version_key] 
+                            if name in line:
+                                if "client-parent" in line:
+                                    out.write('\t<classpathentry kind="var" path="IVY_CACHE/%s/%s/%s/%s-%s-jar.jar"/>\n' % (org, name, rev, name, rev, ))
+                                else:
+                                    out.write('\t<classpathentry kind="var" path="IVY_CACHE/%s/%s/%s/%s-%s.jar" sourcepath="IVY_CACHE/%s/%s/%s/%s-sources-%s.jar"/>\n' % (org, name, rev, name, rev, org, name, rev, name, rev))
+                                print "Replacing %s/%s" % (org, name)
+                    else: 
+                        out.write(line)
+            os.rename(os.path.join(root, ".classpath.new"), os.path.join(root, ".classpath"))

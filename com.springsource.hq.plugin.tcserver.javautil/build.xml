@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="com.springsource.hq.plugin.tcserver.javautil">
+
+	<property name="findbugs.enforce" value="true"/>
+
+	<property file="${basedir}/../build.properties"/>
+	<property file="${basedir}/../build.versions"/>
+	<import file="${basedir}/../spring-build/standard/default.xml"/>
+
+</project>

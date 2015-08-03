@@ -1,0 +1,28 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+
+code .comment {color: #080; font-style: italic}
+code .comment.preproc {color: #008080; font-style: normal}
+code .comment.special {font-weight: bold; font-style: normal}
+code .keyword {color: #000080; font-weight: bold}
+code .operator.word {font-weight: bold}
+code .name.attribute {color: #f00}
+code .name.tag {color: #000080; font-weight: bold}
+code .string {color: #00f}
+code .string.char {color: #800080}
+code .number {color: #00f}

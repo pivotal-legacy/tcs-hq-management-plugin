@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="Response.xsd" />
+	<xs:include schemaLocation="Resource.xsd" />
+	<xs:include schemaLocation="Group.xsd" />
+	
+	<xs:complexType name="JvmOptions">
+		<xs:sequence>
+			<xs:element name="Option" type="xs:string" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="JvmOptionsResponse">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Response">
+					<xs:sequence>
+						<xs:element name="JvmOptions" type="JvmOptions" />
+						<xs:element name="StatusResponse" type="StatusResponse"
+							maxOccurs="unbounded" />
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="JvmOptionsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="JvmOptions" type="JvmOptions" />
+				<xs:element name="Resource" type="Resource" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="JvmOptionsGroupRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="JvmOptions" type="JvmOptions" />
+				<xs:element name="Group" type="Group" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ConfigurationStatusResponse">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Response">
+					<xs:sequence>
+						<xs:element name="StatusResponse" type="StatusResponse"
+							maxOccurs="unbounded" />
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

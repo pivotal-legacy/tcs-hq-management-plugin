@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="publish-top-level" xmlns:aws="antlib:org.springframework.build.aws">
+
+	<target name="publish" depends="publish-package, publish-multi-bundle.publish-ivy"/>
+
+	<target name="publish-package" depends="aws.init">
+		<fail message="The 'project.name' property must be set on this project.">
+			<condition>
+				<not>
+					<isset property="project.name"/>
+				</not>
+			</condition>
+		</fail>
+		<checksum algorithm="sha1">
+			<fileset dir="${artifacts.dir}"/>
+		</checksum>
+		<aws:s3 accessKey="${accessKey}" secretKey="${secretKey}">
+			<upload bucketName="dist.${bucket.basename}" toDir="${adjusted.release.type}/${project.key}" publicRead="true">
+				<fileset dir="${artifacts.dir}"/>
+			</upload>
+		</aws:s3>
+	</target>
+
+</project>

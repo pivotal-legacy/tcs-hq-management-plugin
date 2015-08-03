@@ -1,0 +1,10 @@
+Bundle-SymbolicName: com.springsource.hq.plugin.tcserver.serverconfig.domain
+Bundle-Name: SpringSource HQ tc Server Config Domain
+Bundle-Vendor: SpringSource Inc
+Bundle-ManifestVersion: 2
+Import-Template: 
+ org.springframework.*;version="[2.5.0, 2.6.0)",
+ javax.xml.bind.*;version="[2.0.0, 3.0.0)",
+ javax.xml.transform.*;version="[1.0.0,2.0.0)";resolution:=optional,
+ javax.xml.validation.*;version="[1.0.0,2.0.0)";resolution:=optional,
+ org.xml.sax.*;version="[1.0.0,2.0.0)";resolution:=optional

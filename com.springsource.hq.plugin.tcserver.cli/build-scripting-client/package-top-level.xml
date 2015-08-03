@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="package-top-level">
+
+	<target name="package">
+		<delete dir="${package.output.dir}" quiet="true"/>
+		<mkdir dir="${package.output.dir}"/>
+		<delete file="${hqu.public.dir}/${package.file.name}" quiet="true"/>
+		<mkdir dir="${hqu.public.dir}"/>
+
+		<copy todir="${package.output.dir}" failonerror="false">
+			<fileset dir="resources"/>
+			<filterset>
+				<filter token="BUNDLE_VERSION" value="${bundle.version}"/>
+			</filterset>
+		</copy>
+
+		<all-bundles target="package">
+			<property name="package.output.dir" value="${package.output.dir}"/>
+		</all-bundles>
+
+		<chmod perm="755">
+			<fileset dir="${package.output.dir}">
+				<include name="**/*.sh"/>
+			</fileset>
+		</chmod>
+
+		<zip destfile="${hqu.public.dir}/${package.file.name}">
+			<zipfileset dir="${package.dir}" includes="${package.basename}/**/*.sh" filemode="755"/>
+			<zipfileset dir="${package.dir}" excludes="${package.basename}/**/*.sh"/>
+		</zip>
+	</target>
+
+</project>

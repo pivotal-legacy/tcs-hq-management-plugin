@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="build-tcserver-plugin" default="precommit">
+
+	<target name="precommit" depends="clean, clean-integration, test, findbugs, clover, package"/>
+	
+	<path id="bundles">
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.appmgmt.domain"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.javautil"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.util"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.serverconfig.domain"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.plugin"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.serverconfig.web"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.cli/build-scripting-client"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tcserverclient"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tomcatappmgmt"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.ui.tomcatserverconfig"/>
+	</path>
+	
+	<path id="java-5-bundles">
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.appmgmt.domain"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.javautil"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.serverconfig.domain"/>
+		<pathelement location="${basedir}/../com.springsource.hq.plugin.tcserver.plugin"/>		
+	</path>
+
+	<property file="${basedir}/../build.properties"/>
+	<import file="${basedir}/package-top-level.xml"/>
+	<import file="${basedir}/publish-top-level.xml"/>
+	<import file="${basedir}/../spring-build/multi-bundle/default.xml"/>
+
+	<target name="jar" depends="clean-integration, artifact-multi-bundle.jar" />
+	
+	<target name="java-5-test" depends="java-5-jar, test.pre, java-5-test.do, test.post"
+		description="Executes all tests resulting from a compilation of the test tree returning test success metrics."/>
+		
+	<target name="java-5-jar"
+		description="Creates a JAR file containing the output of a compilation of the source tree.">
+		<all-bundles target="jar" buildpathRef="java-5-bundles"/>
+	</target>
+	
+	<target name="java-5-test.do">
+		<all-bundles target="test.do" buildpathRef="java-5-bundles">
+			<property name="test-results.output.dir" value="${test-results.output.dir}"/>
+		</all-bundles>
+	</target>
+
+</project>

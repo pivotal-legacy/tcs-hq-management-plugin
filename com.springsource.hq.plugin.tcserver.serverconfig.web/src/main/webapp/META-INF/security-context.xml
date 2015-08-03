@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+  	http://www.springframework.org/schema/security 
+  	http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+  	
+  	<!-- This is coded using security namespaces as the default. Not sure if it fails if you swap it with beans and security, but highly recommended
+  	to keep it this way. -->
+  	
+  	<http auto-config="true" entry-point-ref="entryPoint">
+  		<intercept-url pattern="/**" access="ROLE_SESSION"/>
+  		<custom-filter after="ANONYMOUS_FILTER" ref="hqAuthenticationFilter"/>
+  	</http>
+  	
+  	<beans:bean id="entryPoint" class="com.springsource.hq.plugin.tcserver.serverconfig.web.support.HqAuthenticationEntryPoint">
+  		<beans:property name="loginFormUrl" value="/app/login"/>
+  	</beans:bean>
+  	
+  	<beans:bean id="hqAuthenticationFilter" class="com.springsource.hq.plugin.tcserver.serverconfig.web.support.HqAuthenticationFilter">
+  		<beans:property name="defaultRole" value="ROLE_SESSION"/>
+  	</beans:bean>
+
+	<!-- Since a custom session-driven authentication filter is built, this service is never necessary. However, to meet the minimal config
+	requirements of Spring Security's http element, it has to be included. NOTE: Whether or not someone can hack this username/password,
+	the role is of no value, since the authentication check is based on the user's current sessionId. -->
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="deadEnd" password="useless" authorities="NO_USEFUL_ROLE"/>
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

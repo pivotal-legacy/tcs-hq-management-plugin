@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="User">
+        <xs:attribute name="passwordHash" type="xs:string"  use="required"/>
+        <xs:attribute name="htmlEmail"    type="xs:boolean" use="required"/>
+        <xs:attribute name="active"       type="xs:boolean" use="required"/>
+        <xs:attribute name="phoneNumber"  type="xs:string"  use="required"/>
+        <xs:attribute name="SMSAddress"   type="xs:string"  use="required"/>
+        <xs:attribute name="emailAddress" type="xs:string"  use="required"/>
+        <xs:attribute name="department"   type="xs:string"  use="required"/>
+        <xs:attribute name="lastName"     type="xs:string"  use="required"/>
+        <xs:attribute name="firstName"    type="xs:string"  use="required"/>
+        <xs:attribute name="name"         type="xs:string"  use="required"/>
+        <xs:attribute name="id"           type="xs:int"     use="optional"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<project name="com.springsource.hq.plugin.tcserver.serverconfig.web">
+
+	<property name="findbugs.enforce" value="true"/>
+
+	<property file="${basedir}/../build.properties" />
+	<property file="${basedir}/../build.versions" />
+	<import file="${basedir}/../spring-build/war/default.xml"/>
+
+	<property name="dojo.version" value="1.5.0"/>
+
+	<target name="dojo-update" depends="dojo.unzip, dojo.optimize">
+		<delete includeemptydirs="true" quiet="true">
+			<fileset dir="${main.webapp.dir}">
+				<include name="dijit/**"/>
+				<include name="dojo/**"/>
+				<include name="dojox/**"/>
+			</fileset>
+		</delete>
+		<copy todir="${main.webapp.dir}">
+			<fileset dir="${dojo.optimized.dir}"/>
+		</copy>
+	</target>
+
+	<target name="dojo.optimize">
+		<property name="dojo.optimized.dir" value="${target.dir}/dojo-optimized-${dojo.version}-src"/>
+		<property name="dojo.build.dir" value="${target.dir}/dojo-release-${dojo.version}-src/util/buildscripts"/>
+
+		<chmod file="${dojo.build.dir}/build.sh" perm="+x"/>
+		<exec executable="${dojo.build.dir}/build.sh" dir="${dojo.build.dir}/">
+			<arg line="releaseDir=${dojo.optimized.dir}"/>
+			<arg line="profileFile=${basedir}/standard.profile.js"/>
+			<arg line="releaseName="/>
+			<arg line="copyTests=false"/>
+			<arg line="action=release"/>
+			<arg line="optimize=shrinksafe.keepLines"/>
+			<arg line="cssOptimize=comments.keepLines"/>
+			<arg line="cssImportIgnore=../dijit.css"/>
+		</exec>
+	</target>
+
+	<target name="dojo.unzip" depends="dojo.download">
+		<mkdir dir="${target.dir}"/>
+		<unzip dest="${target.dir}">
+			<path refid="dojo.path"/>
+		</unzip>
+	</target>
+
+	<target name="dojo.download">
+		<mkdir dir="${target.dir}"/>
+		<get src="http://download.dojotoolkit.org/release-${dojo.version}/dojo-release-${dojo.version}-src.zip"
+				dest="${target.dir}" usetimestamp="true" verbose="true"/>
+		<path id="dojo.path">
+			<pathelement location="${target.dir}/dojo-release-${dojo.version}-src.zip"/>
+		</path>
+	</target>
+
+</project>

@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<div class="dijit dijitReset dijitInlineTable dijitLeft"
+	id="widget_${id}"
+	waiRole="combobox" tabIndex="-1"
+	><div style="overflow:hidden;"
+		><div class='dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton'
+			dojoAttachPoint="downArrowNode,_buttonNode,_popupStateNode" waiRole="presentation"
+			><div class="dijitArrowButtonInner">&thinsp;</div
+			><div class="dijitArrowButtonChar">&#9660;</div
+		></div
+		><div class="dijitReset dijitValidationIcon"><br></div
+		><div class="dijitReset dijitValidationIconText">&Chi;</div
+		><div class="dijitReset dijitInputField"
+			><input type="text" autocomplete="off" ${!nameAttrSetting} class='dijitReset'
+				dojoAttachEvent='onkeypress:_onKey' 
+				dojoAttachPoint='textbox,focusNode' waiRole="textbox" waiState="haspopup-true,autocomplete-list"
+		/></div
+	></div
+></div>

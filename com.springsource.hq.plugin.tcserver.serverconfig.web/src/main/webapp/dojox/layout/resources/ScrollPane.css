@@ -1,0 +1,38 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+.dojoxScrollWindow {
+	position:relative;
+	overflow:hidden;
+}
+.dojoxScrollHelper .helperInner {
+	visibility: hidden;
+}
+.dojoxScrollHelper {
+	border:1px solid #b7b7b7;
+	width:4px;
+	background:#ededed;
+	height:4px;
+	position:absolute;
+	top:4px;
+	left:4px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.dojoxScrollWrapper {
+}

@@ -1,0 +1,155 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+/* 
+ * COLORS CSS
+ *
+ * Only styles that affect the colors and text decoration of elements should be included here.
+ *
+ * COMMON STYLES
+ */
+body {
+	background-color: #dfdfdf;
+}
+
+#page {
+	color: #333;
+}
+
+/*
+ * HEADER STYLES
+ */
+#site-name a,#site-name a:hover,#company-name a {
+	color: #fff;
+}
+
+/*
+ * TEXT FORMATTING STYLES
+ */
+h1 {
+	color: #333;
+	border-bottom: 1px solid #ec992e;
+}
+
+h2,h3,h4 {
+	color: #333;
+}
+
+/*
+ * LINK STYLES
+ */
+a:link,a:visited {
+	color: #2d6ebe;
+	text-decoration: none;
+}
+
+a:hover,a:focus {
+	color: #ec992e;
+}
+
+/*
+ * MENU STYLES
+ */
+#primary-left,#primary-left a,#primary-right a {
+	color: #fff;
+	text-decoration: none;
+	background-color: #636363;
+}
+
+#primary-left a:hover,#primary-right a:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+#secondary-navigation {
+	background: #fff;
+}
+
+#secondary-navigation li a {
+	border-bottom: 1px solid #e4e3e3;
+}
+
+#secondary-navigation a:hover {
+	color: #ec992e;
+}
+
+#secondary-navigation a.active {
+	font-weight: bold;
+}
+
+#top-links a {
+	color: #595959;
+}
+
+#top-links {
+	background: #fff;
+}
+
+#top-links a:hover {
+	color: #60aa00;
+	text-decoration: underline;
+}
+
+#top-links a.active {
+	font-weight: bold;
+}
+
+
+
+/*
+ * CONTAINER STYLES
+ */
+#container {
+	background: #fff;
+}
+
+/*
+ * TABLE STYLES
+ */
+table {
+	color: #666;
+}
+
+.bordered-table {
+	border: 1px solid #d5d8de;
+}
+
+.tundra .dijitTitlePaneTextNode,
+th {
+	color: #fff;
+}
+
+.bordered-bottom,.bordered-table th {
+	border-bottom: 1px solid #d5d8de;
+}
+
+.sublevel1-odd,.name-sublevel1-odd {
+	background: #e5e7de;
+}
+
+.sublevel1-even,.name-sublevel1-even {
+	background: #fff;
+}
+
+/*
+ * FOOTER STYLES
+ */
+#footer-left,#footer-right,#footer-left a,#footer-right a {
+	color: #999;
+	text-decoration: none;
+}

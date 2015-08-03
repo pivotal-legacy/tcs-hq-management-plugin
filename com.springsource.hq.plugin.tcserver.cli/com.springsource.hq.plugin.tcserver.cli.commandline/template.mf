@@ -1,0 +1,12 @@
+Bundle-SymbolicName: com.springsource.hq.plugin.tcserver.cli.commandline
+Bundle-Name: SpringSource tc Server Command Line Client
+Bundle-Vendor: SpringSource Inc
+Bundle-ManifestVersion: 2
+Import-Template: 
+ org.hyperic.hq.hqapi1.*;version="[1.0.0,2.0.0)",
+ com.springsource.hq.plugin.tcserver.cli.client.*;version="[2.0.0,3.0.0)",
+ joptsimple.*;version="[3.0.0,4.0.0)",
+ org.springframework.*;version="[2.5.6,3.0.0)",
+ org.apache.commons.logging.*;version="[1.1.1,2.0.0)"
+Unversioned-Imports: 
+ javax.net.ssl

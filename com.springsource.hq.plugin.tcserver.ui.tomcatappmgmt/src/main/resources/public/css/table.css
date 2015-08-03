@@ -1,0 +1,135 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+	/* table.css */
+	/*
+	 * TEXT FORMATTING STYLES
+	 */
+	div#attachPointContainer {
+		font-family: Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
+	}
+	
+	div#attachPointContainer h1 {
+		color: #333;
+		border-bottom: 1px solid #ec992e;
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 12px 0 5px;
+		margin: 0;
+	}
+	
+	div#attachPointContainer h2 {
+		font-family: inherit!;
+		font-size: 1.35em;
+		color: #333;
+		margin-top: 0.5em;
+		margin-bottom: 0;
+	}
+	
+	div#serviceNavigation,
+	div#deployedApps {
+		margin-top: 0.5em;
+	}
+	
+	div.pageContent {
+		margin: 12px;
+	}
+	
+	div.pageContent p {
+		margin-top: 0.25em;
+		margin-bottom:0.25em;
+	}
+	
+	blockquote {
+		border: 0 none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	/*
+	 * TABLE STYLES
+	 */
+	.bordered-table {
+		border: 1px solid #d5d8de;
+		border-spacing: 0;
+		margin: 0;
+		border-collapse: collapse;
+	}
+
+	.bordered-bottom,.bordered-table th {
+		border-bottom: 1px solid #d5d8de;
+	}
+
+	.sublevel1-odd,.name-sublevel1-odd {
+		background: #eee;
+	}
+
+	.sublevel1-even,.name-sublevel1-even {
+		background: #fff;
+	}
+	
+	.bordered-table th {
+		color:#fff;
+		background: url(../images/table-header-background.png) repeat-x;
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	.bordered-table th {
+		padding: 5px 0;
+	}
+	
+	.bordered-table tr > td:first-child,
+	.bordered-table tr > th:first-child {
+		padding: 5px 6px;
+	}
+
+	.setting {
+		white-space: nowrap;
+		padding: 6px;
+	}
+	
+	.name-sublevel1-odd {
+		padding-left: 20px;
+		font-weight: bold;
+	}
+
+	.name-sublevel1-even {
+		padding-left: 20px;
+		font-weight: bold;
+	}
+	
+	div.buttonContainer {
+		padding-top: 5px;
+		margin-bottom: 2em;
+	}
+	
+	.buttonStyle {
+		-moz-border-radius-bottomleft:3px;
+		-moz-border-radius-bottomright:3px;
+		-moz-border-radius-topleft:3px;
+		-moz-border-radius-topright:3px;
+		background-color:#2DBF3D;
+		border:1px solid #84B96D;
+		color:#FFF;
+		cursor:pointer;
+		font-size:11px !important;
+		font-weight:700;
+		overflow:visible;
+		padding:0 5px;
+		width:auto;
+	}

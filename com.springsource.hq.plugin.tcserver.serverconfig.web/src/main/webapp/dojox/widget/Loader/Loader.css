@@ -1,0 +1,41 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+.dojoxLoaderPointer {
+	position:absolute; 
+	z-index:999; 
+}
+.dojoxLoader {
+	float:right; 
+	position:fixed; 
+	height:25px;
+	width:100px; 
+	top:0;
+	right:0; 
+	padding:3px; 
+	border:1px solid #ccc;
+	background:#fff;  
+	min-width:42px; 
+}
+.dojoxLoaderIcon {
+	height:22px; width:22px; 
+	vertical-align:middle; 
+}
+.dojoxLoaderMessage {
+	font:8pt Arial,san-serif;
+	color:#666; 
+}

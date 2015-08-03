@@ -1,0 +1,105 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+.dijitRtl .dijitPlaceHolder {
+	left: auto;
+	right: 0;
+}
+.dijitMenuItemRtl {
+	text-align: right;
+}
+.dj_iequirks .dijitComboButtonRtl BUTTON {
+	
+	float:left;
+}
+.dijit_a11y .dijitTextBoxRtl .dijitValidationContainer,
+.dijitTextBoxRtl .dijitSpinnerButtonContainer,
+.dijitComboBoxRtl .dijitArrowButtonContainer {
+	
+	border-right-width: 1px !important;
+	border-right-style: solid !important;
+	border-left-width: 0px !important;
+	border-left-style: none !important;
+}
+.dijit_a11y .dijitTextBoxRtl .dijitValidationContainer,
+.dijit_a11y .dijitTextBoxRtl .dijitSpinnerButtonContainer,
+.dijit_a11y .dijitComboBoxRtl .dijitArrowButtonContainer {
+	border-right: 1px solid black !important;
+	border-left: 0px none black !important;
+}
+.dijitSpinnerRtl .dijitSpinnerButtonContainer .dijitArrowButton {
+	right: 0;
+	left: auto;
+}
+.dijitTextBoxRtl .dijitSpinnerButtonContainer,
+.dijitTextBoxRtl .dijitValidationContainer,
+.dijitTextBoxRtl .dijitArrowButtonContainer {
+	float: left;
+}
+.dijitCalendarRtl .dijitCalendarNextYear {
+	margin:0 0.55em 0 0;
+}
+.dijitCalendarRtl .dijitCalendarPreviousYear {
+	margin:0 0 0 0.55em;
+}
+.dijitSliderRtl .dijitSliderImageHandleV {
+	left:auto;
+}
+.dijitSliderRtl .dijitSliderImageHandleH {
+	left:-50%;
+}
+.dijitSliderRtl .dijitSliderMoveableH {
+	right:auto;
+	left:0;
+}
+.dijitSliderRtl .dijitRuleContainerV {
+	float:right;
+}
+.dj_ie .dijitSliderRtl .dijitRuleContainerV {
+	text-align:right;
+}
+.dj_ie .dijitSliderRtl .dijitRuleLabelV {
+	text-align:left;
+}
+.dj_ie .dijitSliderRtl .dijitRuleLabelH {
+	zoom:1;
+}
+.dijitSliderRtl .dijitSliderProgressBarH {
+	
+	float:right;
+	right:0;
+	left:auto;
+}
+.dijitRtl .dijitContentPaneLoading, .dijitRtl .dijitContentPaneError {
+	background-position:right;
+	padding-right:25px;
+}
+.dijitTabRtl .dijitTabCloseButton {
+	margin-left: 0px;
+	margin-right: 1em;
+}
+.dj_ie .dijitTimePickerRtl .dijitTimePickerItem {
+	width:100%;
+}
+.dijitColorPaletteRtl .dijitColorPaletteUnder {
+	
+	left: auto;
+	right: 0;
+}
+.dijitSelectRtl .dijitButtonContents {
+	text-align: right;
+}

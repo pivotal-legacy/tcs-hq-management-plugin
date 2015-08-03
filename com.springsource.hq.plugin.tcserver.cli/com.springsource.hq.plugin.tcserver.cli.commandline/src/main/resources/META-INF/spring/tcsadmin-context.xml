@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	<bean id="commandDispatcher"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.DefaultCommandDispatcher">
+		<constructor-arg>
+			<list>
+				<ref bean="listServersCommand" />
+				<ref bean="modifyServerCommand" />
+				<ref bean="listGroupsCommand" />
+				<ref bean="createGroupCommand" />
+				<ref bean="addServerToGroupCommand" />
+				<ref bean="removeServerFromGroupCommand" />
+				<ref bean="deleteGroupCommand" />
+				<ref bean="listApplicationsCommand" />
+				<ref bean="deployApplicationCommand" />
+				<ref bean="startApplicationCommand" />
+				<ref bean="stopApplicationCommand" />
+				<ref bean="reloadApplicationCommand" />
+				<ref bean="undeployApplicationCommand" />
+				<ref bean="getFileCommand" />
+				<ref bean="putFileCommand" />
+				<ref bean="revertToPreviousConfigurationCommand"/>
+				<ref bean="listJvmOptionsCommand" />
+				<ref bean="setJvmOptionsCommand" />
+				<ref bean="startCommand" />
+				<ref bean="stopCommand" />
+				<ref bean="restartCommand" />
+			</list>
+		</constructor-arg>
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="systemOutWriter" class="java.io.PrintWriter">
+		<constructor-arg>
+			<bean class="java.io.OutputStreamWriter">
+				<constructor-arg>
+					<util:constant static-field="java.lang.System.out" />
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+	</bean>
+	<bean id="systemErrWriter" class="java.io.PrintWriter">
+		<constructor-arg>
+			<bean class="java.io.OutputStreamWriter">
+				<constructor-arg>
+					<util:constant static-field="java.lang.System.err" />
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+	</bean>
+	<bean id="listGroupsCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.ListGroupsCommand">
+		<constructor-arg ref="groupRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="createGroupCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.CreateGroupCommand">
+		<constructor-arg ref="groupRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="deleteGroupCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.DeleteGroupCommand">
+		<constructor-arg ref="groupRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="addServerToGroupCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.AddServerToGroupCommand">
+		<constructor-arg ref="groupRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="removeServerFromGroupCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.RemoveServerFromGroupCommand">
+		<constructor-arg ref="groupRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="listApplicationsCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.ListApplicationsCommand">
+		<constructor-arg ref="applicationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="deployApplicationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.DeployApplicationCommand">
+		<constructor-arg ref="applicationManager" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="startApplicationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.StartApplicationCommand">
+		<constructor-arg ref="applicationManager" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="stopApplicationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.StopApplicationCommand">
+		<constructor-arg ref="applicationManager" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="reloadApplicationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.ReloadApplicationCommand">
+		<constructor-arg ref="applicationManager" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="revertToPreviousConfigurationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.configuration.RevertToPreviousConfigurationCommand">
+		<constructor-arg ref="configurationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="undeployApplicationCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.application.UndeployApplicationCommand">
+		<constructor-arg ref="applicationManager" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="listServersCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.ListServersCommand">
+		<constructor-arg ref="resourceRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="modifyServerCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.inventory.ModifyServerCommand">
+		<constructor-arg ref="resourceRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="setJvmOptionsCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.configuration.SetJvmOptionsCommand">
+		<constructor-arg ref="configurationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="listJvmOptionsCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.configuration.ListJvmOptionsCommand">
+		<constructor-arg ref="configurationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="getFileCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.configuration.GetFileCommand">
+		<constructor-arg ref="configurationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="putFileCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.configuration.PutFileCommand">
+		<constructor-arg ref="configurationRepository" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="startCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.control.StartCommand">
+		<constructor-arg ref="controlOperationInvoker" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="stopCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.control.StopCommand">
+		<constructor-arg ref="controlOperationInvoker" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="restartCommand"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.control.RestartCommand">
+		<constructor-arg ref="controlOperationInvoker" />
+		<constructor-arg ref="optionParserFactory" />
+		<constructor-arg index="2" ref="systemOutWriter" />
+		<constructor-arg index="3" ref="systemErrWriter" />
+	</bean>
+	<bean id="applicationRepository"
+		class="com.springsource.hq.plugin.tcserver.cli.client.application.WebServiceApplicationRepository">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="applicationManager"
+		class="com.springsource.hq.plugin.tcserver.cli.client.application.WebServiceApplicationManager">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="resourceRepository"
+		class="com.springsource.hq.plugin.tcserver.cli.client.inventory.WebServiceResourceRepository">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="configurationRepository"
+		class="com.springsource.hq.plugin.tcserver.cli.client.configuration.WebServiceConfigurationRepository">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="groupRepository"
+		class="com.springsource.hq.plugin.tcserver.cli.client.inventory.WebServiceGroupRepository">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="controlOperationInvoker"
+		class="com.springsource.hq.plugin.tcserver.cli.client.control.WebServiceControlOperationInvoker">
+		<constructor-arg ref="connection" />
+	</bean>
+	<bean id="optionParserFactory"
+		class="com.springsource.hq.plugin.tcserver.cli.commandline.OptionParserFactory" />
+	
+	<bean id="connection" class="com.springsource.hq.plugin.tcserver.cli.commandline.HQConnectionFactory">
+		<constructor-arg>
+			<bean class="org.springframework.beans.factory.config.PropertiesFactoryBean" p:ignoreResourceNotFound="true">
+				<property name="location">
+					<bean class="com.springsource.hq.plugin.tcserver.cli.commandline.PropertiesFileLocator" />
+				</property>
+			</bean>
+		</constructor-arg>		
+	</bean>	
+</beans>

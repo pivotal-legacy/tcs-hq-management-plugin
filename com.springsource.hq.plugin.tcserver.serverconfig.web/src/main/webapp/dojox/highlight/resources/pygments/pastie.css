@@ -1,0 +1,47 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+
+code .comment {color: #888}
+code .comment.preproc {color: #c00; font-weight: bold}
+code .comment.special {color: #c00; font-weight: bold; background-color: #fff0f0}
+code .keyword {color: #008800; font-weight: bold}
+code .keyword.pseudo {font-weight: normal}
+code .keyword.type {color: #888}
+code .operator.word {color: #080}
+code .name.builtin {color: #038}
+code .name.function {color: #06b; font-weight: bold}
+code .name.class {color: #b06; font-weight: bold}
+code .name.namespace {color: #b06; font-weight: bold}
+code .name.exception {color: #b06; font-weight: bold}
+code .name.variable {color: #369}
+code .name.variable.class {color: #369}
+code .name.variable.instance {color: #33b}
+code .name.variable.global {color: #d70}
+code .name.constant {color: #036; font-weight: bold}
+code .name.label {color: #369; font-style: italic}
+code .name.attribute {color: #369}
+code .name.tag {color: #b06; font-weight: bold}
+code .name.decorator {color: #555}
+code .name.property {color: #369; font-weight: bold}
+code .string {color: #d20; background-color: #fff0f0}
+code .string.interpol {color: #33b}
+code .string.escape {color: #04d}
+code .string.regex {color: #080; background-color: #fff0f0}
+code .string.symbol {color: #a60}
+code .string.other {color: #2b2; background-color: #f0fff0}
+code .number {color: #00d; font-weight: bold}

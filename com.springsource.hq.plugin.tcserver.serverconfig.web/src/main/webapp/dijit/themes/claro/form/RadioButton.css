@@ -1,0 +1,68 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+
+.claro .dijitToggleButton .dijitRadio,
+.claro .dijitToggleButton .dijitRadioIcon {
+	background-image: url('images/checkboxRadioButtonStates.png');
+}
+.dj_ie6 .claro .dijitToggleButton .dijitRadio,
+.dj_ie6 .claro .dijitToggleButton .dijitRadioIcon {
+	background-image: url('images/checkboxAndRadioButtons_IE6.png');
+}
+.claro .dijitRadio,
+.claro .dijitRadioIcon	{		
+	background-image: url('images/checkboxRadioButtonStates.png'); 
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+	margin: 0px 2px 0px 0px;
+	padding: 0px;
+}
+.dj_ie6 .claro .dijitRadio,
+.dj_ie6 .claro .dijitRadioIcon	{		
+	background-image: url('images/checkboxAndRadioButtons_IE6.png'); 
+}
+.claro .dijitRadio{
+	
+	background-position: -105px;
+}
+.claro .dijitToggleButton .dijitRadioIcon {
+	
+	background-position: -107px;
+}
+.claro .dijitRadioDisabled {
+	
+	background-position: -165px;
+}
+.claro .dijitRadioHover {
+	
+	background-position: -135px;
+}
+.claro .dijitRadioChecked{
+	background-position: -90px;
+}
+.claro .dijitToggleButtonChecked .dijitRadioIcon {
+	background-position: -92px;
+}
+.claro .dijitRadioCheckedHover{
+	background-position: -120px;
+}
+.claro .dijitRadioCheckedDisabled {
+	
+	background-position: -150px;
+}

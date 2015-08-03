@@ -1,0 +1,813 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+/*
+ * MAIN CSS
+ *
+ * All css for the screen, other than color-specific styles,
+ * should be included here.  Color styles should be included
+ * in colors.css.
+ *
+ */
+
+/*
+ * COMMON STYLES
+ */
+
+  body
+  {
+    font: 12px Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+  }
+
+  #page
+  {
+    margin:8px;
+  }
+
+  
+
+
+/*
+ * HEADER STYLES
+ */
+
+  #header
+  {
+    background: #6c940b url(../images/header-stretch.png);
+    width: 100%;
+    height:	72px;
+  }
+
+  #name-and-company
+  {
+    background: url(../images/header-left.png) top left no-repeat;
+    width: 100%;
+    height: 72px;
+    position:relative;
+    top:0px;
+    left:0px;
+  }
+
+  #site-name
+  {
+    margin: 0;
+    display: inline;
+    font-size: 150%;
+  }
+
+  #site-name a, #site-name a:hover
+  {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position:absolute;
+    top:30px;
+    left:16px;
+    text-decoration:none;
+  }
+
+  #company-name a
+  {
+    position:absolute;
+    right:0px;
+    background: url(../images/header-right.png) top right no-repeat;
+    height:72px;
+    width:190px;
+    font-size:8px;
+    text-align: center;
+  }
+
+  #search
+  {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+  }
+/*
+ * TEXT FORMATTING STYLES
+ */
+
+h1 {
+	font-size: 1.4em;
+	padding:12px 0 5px 0;
+	line-height:125%;
+}
+
+h2 {
+	font-size: 1.2em;
+	padding:10px 0 2px 0;
+}
+
+h3 {
+	font-size: 1em;
+	padding:8px 0 5px 0;
+}
+
+h4 {
+	font-size: 1em;
+	padding-top:8px;
+}
+
+
+
+/*
+ * MENU STYLES
+ */
+
+  #primary-navigation
+  {
+  	padding: 0;
+    background: url(../images/primary-menu-stretch.png) repeat-x;
+    height:23px;
+    position:relative;
+    margin: 8px 0 0 0;
+  }
+  
+  #primary-left
+  {
+    background-repeat:no-repeat;
+    background-position:top left;
+    font-size: 93%;
+    line-height: normal;
+    padding: 0 0 0 8px;
+    height:23px;
+    position:relative;
+    float:left;
+  }
+  
+  #primary-right
+  {
+    background-repeat:no-repeat;
+    background-position:top right;
+    font-size: 93%;
+    line-height: normal;
+    padding: 0 8px 0 0;
+    height:23px;
+    position:relative;
+    float:right;
+  }
+
+  #primary-left ul, #primary-right ul
+  {
+    padding: 0 0 0 5px;
+    margin: 0;
+    list-style: none;
+  }
+  
+  #primary-left li, #primary-right li
+  {
+    display:inline;
+  }
+
+
+  #primary-left a, #primary-right a
+  {
+    font-weight: normal;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 4px 14px;
+    margin: 0px 1px 0 0;
+    background-position: 0% 0;
+    background-image: url(../images/primary-item-background.png);
+    background-repeat: repeat-x;
+  }
+
+  #primary-left a:hover, #primary-right a:hover
+  {
+    background-image:none;
+  }
+
+
+  #secondary-navigation
+  {
+    width:212px;
+    height:100%;
+    margin-left:16px;
+    float:left;
+  }
+
+  #secondary-navigation ul
+  {
+    margin: 0;
+    padding: 12px 0 0 0;
+    list-style: none;
+  }
+
+  #secondary-navigation li a
+  {
+    display: block;
+    text-decoration: none;
+    padding: 6px 5px;
+  }
+  
+  #secondary-navigation ul ul
+  {
+    margin: 0;
+    padding: 0 0 0 12px;
+    list-style: none;
+  }
+ 
+  #content, #content-no-nav
+  {
+  	display:block;
+  	margin:-10px 16px 0 244px;
+  	padding-bottom:20px;
+  }
+
+#content-no-nav {
+	margin-left: 16px;
+}
+  
+/*
+ * CONTAINER STYLES
+ */  
+ 
+  #container
+  {
+    margin: 0;
+    padding-bottom:20px;
+    overflow:hidden;
+  }
+  
+/*
+ * TABLE STYLES
+ */    
+ 
+ table 
+ {
+ 	border-spacing:0;
+ 	margin:0;
+ 	border-collapse:collapse;
+ }
+ 
+ th 
+ {
+ 	height:19px;
+ 	text-align:left;
+ 	font-weight:bold;
+ 	margin:0;
+ 	padding:3px 6px 0 6px;
+ 	line-height:19px;
+ }
+ 
+ .bordered-table {
+ 	width: 600px;
+ }
+ 
+ .bordered-table th
+ {
+ 	background-image: url(../images/table-header-background.png);
+    background-repeat: repeat-x;
+ }
+ 
+ td
+ {
+ 	margin:0;
+ 	padding:4px 6px;
+ 	vertical-align:top;
+ }
+ 
+ .name-sublevel1-odd 
+ {
+ 	padding-left:20px;
+ 	font-weight:bold;
+ }
+ 
+ .name-sublevel1-even 
+  {
+ 	padding-left:20px;
+ 	font-weight:bold;
+ } 
+ 
+ .two-tables
+ {
+ 	width:100%;
+ }
+ 
+ .two-tables .left
+ {
+ 	float:left;
+ }
+ 
+ .two-tables .right 
+ {
+ 	float:right;
+ }
+
+/*
+ * FORM STYLES
+ */
+
+  input, textarea, textfield
+  {
+    margin: 0;
+    font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+    padding: 1px;
+    font-size: 100%;
+  }
+
+  input.form-checkbox, input.form-radio
+  {
+    border: none;
+  }
+
+  #search .form-text, #user-login-form .form-text
+  {
+    padding: 2px;
+  }
+
+  .form-submit, .button
+  {
+    padding: 1px;
+  }
+
+.spring-js-submit {
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	background-color:#2DBF3D;
+	border:1px solid #84B96D;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px !important;
+	font-weight:700;
+	overflow:visible;
+	padding:0 5px;
+	width:auto;
+}
+  
+  #user-login-form
+  {
+    text-align: left;
+  }
+
+  #user-login-form .item-list ul
+  {
+    margin-top: 10px;
+  }
+
+/*
+ * ALERTS, STATUS, HELP MESSAGE STYLES
+ */
+
+  .messages
+  {
+    padding: 1.3em 1em .3em 52px;
+    margin: 10px 0;
+  }
+
+  .messages ul
+  {
+    padding: 0 0 0 20px;
+    margin: 0;
+  }
+
+/*
+ * FOOTER STYLES
+ */
+
+  #footer-wrapper
+  {
+  	clear:both;
+    margin: 0;
+    background-image: url(../images/footer-stretch.png);
+    background-repeat:repeat-x;
+    height: 29px;
+    width:100%;
+  }
+
+  #footer-left, #footer-right
+  {
+    margin: 0;
+    font-size: 85%;
+    padding: 1em;
+    height:29px;
+  }
+
+
+  #footer-left
+  {
+    text-align:left;
+    background-image: url(../images/footer-left.png);
+    background-repeat:no-repeat;
+    position:relative;
+    left:0;
+    float:left;
+  }
+  
+  #footer-right
+  {
+  	text-align:right;
+  	background-image: url(../images/footer-right.png);
+  	background-repeat:no-repeat;
+  	background-position:top right;
+  	position:relative;
+  	right:0;
+  	float:right;
+  }
+
+
+
+
+
+
+
+
+
+
+#top-links {
+	margin-left:16px;
+}
+
+#top-links a {
+    padding-right: 24px;
+}
+
+.tundra .dijitTitlePane {
+	margin-top: 1em;
+}
+
+.tundra .dijitTitlePane .dijitTitlePaneTitle {
+	background: url(../images/table-header-background.png) repeat-x top #636363;
+	height:19px;
+	text-align:left;
+	font-weight:bold;
+	margin:0;
+	padding:3px 6px 0 6px;
+	line-height:19px;
+	border:1px solid #d5d8de;
+}
+
+.tundra .dijitTitlePane .dijitTitlePaneTitle a.edit {
+	float: right;
+	text-decoration: none;
+}
+
+.tundra .dijitTitlePane .dijitTitlePaneContentOuter {
+	border:1px solid #d5d8de;
+}
+
+.tundra .dijitTitlePane .dijitArrowNode {
+	float: left;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.error {
+	display: block;
+    color: red;
+    background-color: inherit;
+    font-weight: bold;
+}
+
+#container {
+	border: 1px solid #333;
+	border-top: 0;
+}
+
+#primary-left, #primary-right {
+	background: inherit;
+}
+
+body {
+	background-color: #FFFFFF !important;
+}
+
+h1 {
+	position: relative;
+}
+/*
+.dijitInputField, .dijitButtonNode {
+	padding: 3px !important;
+}
+*/
+
+.dijit input {
+	padding: 3px;
+}
+
+.dijitSpinner .dijitInputField {
+	padding: 0 !important;
+}
+
+.dijitValidationIcon {
+	padding: 3px 0 3px 3px;
+}
+
+.dijitSpinner .dijitButtonNode {
+	padding: 0 !important;
+}
+
+.dijitSpinner .dijitSpinnerButtonContainer {
+	height: 19px;
+}
+
+.dj_ie .dijitSpinner .dijitSpinnerButtonContainer {
+	height: 21px;
+}
+
+
+.dijitComboBox .dijitInputField {
+	padding: 0 !important;
+}
+
+.dijitComboBox .dijitArrowButton {
+	padding: 4px 0 !important;
+}
+
+.dj_ie6 .dijitTextBox .dijitInputField {
+	width: 86%;
+}
+
+.dj_ie6 .dijitSpinner .dijitInputField,
+.dj_ie6 .dijitComboBox .dijitInputField {
+	width: 76%;
+}
+
+.required {
+	font-weight: bold;
+}
+
+.required:before {
+	content: ' * '
+}
+
+.center {
+	text-align: center;
+}
+
+ul.recomendation {
+	margin: 0;
+	padding: 0;
+}
+
+ul.recomendation li {
+	margin: 0;
+	padding: 2px;
+	list-style-position: inside;
+	list-style-image: url('../images/springsource.png');
+}
+
+
+
+
+a.help-link, a.help-link img {
+	border: 0;
+}
+
+h1 a.help-link {
+	position: absolute;
+	right: 0;
+	bottom: 6px;
+}
+
+.bordered-table a.help-link {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('../images/help-gray.png') 0 0 no-repeat;
+	vertical-align: top;
+}
+
+.bordered-table a.help-link:hover {
+	background: url('../images/help.png') 0 0 no-repeat;
+}
+
+.bordered-table a.help-link img {
+	display: none;
+}
+
+.branch {
+	margin-left: 16px;
+}
+
+
+.bordered-table .dijitTitlePane {
+	margin-top: 0.25em;
+}
+
+.bordered-table .dijitTitlePane .dijitTitlePaneTitle,
+.bordered-table .dijitTitlePane .dijitTitlePaneContentOuter {
+	background: inherit !important;
+	border: 0;
+}
+
+.bordered-table .dijitTitlePane .dijitTitlePaneContentInner {
+	padding: 3px;
+} 
+
+.bordered-table .dijitTitlePane .dijitTitlePaneTitle {
+	font: inherit;
+}
+
+.bordered-table .dijitTitlePane .dijitTitlePaneTitle .dijitArrowNode {
+	margin-top: 3px;
+}
+
+.errors {
+	background-color: #FFF5EE;
+	border: 1px solid #FFDDBB;
+	color: #666666;
+}
+
+div.errors {
+	margin-top: 1.5em;
+	padding: 0.5em;
+	width: 586px;
+}
+
+
+
+.bordered-table h3 {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #2d6ebe;
+	margin-bottom: 3px;
+}
+
+div.dijitTitlePane.bordered-table {
+	border: 0;
+}
+
+div.dijitTitlePane.bordered-table table {
+	width: 100%;
+}
+
+.tundra .dijitTitlePane .dijitArrowNode {
+	margin: 4px 0;
+}
+
+input[type=button].guide {
+	margin-left: 3px;
+}
+
+.helper-dialog select {
+	margin-left: 3px;
+}
+
+.helper-dialog dd + dt {
+	margin-top: 8px;
+}
+
+#pattern-helper-text {
+	overflow: auto;
+	width: 400px;
+	height: 300px;
+	margin-top: 8px;
+}
+
+.dijitTextBox.spring-js-wide,
+.dijitSpinner.spring-js-wide,
+.dijitComboBox.spring-js-wide,
+.dijitFilteringSelect.spring-js-wide,
+.dijitTextArea.spring-js-wide  {
+	width: 240px;
+}
+
+.dijitTextBox.spring-js-extra-wide,
+.dijitSpinner.spring-js-extra-wide,
+.dijitComboBox.spring-js-extra-wide,
+.dijitFilteringSelect.spring-js-extra-wide,
+.dijitTextArea.spring-js-extra-wide {
+	width: 320px;
+}  
+
+.dj_ie .dijitTextArea div {
+	padding-bottom: 1.5em;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+
+
+/* ReadOnly should mimic disabled */
+
+.tundra .dijitReadOnly .dijitButtonText {
+	color: #7F7F7F;
+}
+.tundra .dijitReadOnly .dijitArrowButtonInner {
+	background-position: -28px top;
+}
+.tundra .dijitReadOnly .dijitUpArrowButton .dijitArrowButtonInner { 
+	background-position: -49px top; 
+}
+
+
+.tundra .dijitRadioReadOnly {
+	/* unselected and readOnly */
+	background-position: -144px;
+}
+
+.tundra .dijitRadioCheckedReadOnly {
+	/* selected but readOnly */
+	background-position: -128px;
+}
+
+.tundra .dijitCheckBoxReadOnly {
+	/* readOnly */
+	background-position: -48px;
+}
+
+.tundra .dijitCheckBoxCheckedReadOnly {
+	/* readOnly but checked */
+	background-position: -32px;
+}
+
+.tundra .dijitButtonReadOnly .dijitButtonNode,
+.tundra .dijitToggleButtonReadOnly .dijitButtonNode,
+.tundra .dijitDropDownButtonReadOnly .dijitButtonNode,
+.tundra .dijitComboButtonReadOnly .dijitButtonNode,
+.tundra .dijitComboBoxReadOnly,
+.tundra .dijitSpinnerReadOnly,
+.tundra .dijitSpinnerReadOnly .dijitButtonNode {
+	/* readOnly state - inner */
+	/* border-color: #d5d5d5 #bdbdbd #bdbdbd #d5d5d5; */
+	border-color: #d5d5d5 #d5d5d5 #bdbdbd #d5d5d5; 
+	background:#e4e4e4 url("../dijit/themes/tundra/images/buttonDisabled.png") top repeat-x;
+}
+
+.tundra .dijitTextBoxReadOnly,
+.tundra .dijitComboBoxReadOnly,
+.tundra .dijitSpinnerReadOnly,
+.tundra .dijitTextAreaReadOnly {
+	color: gray;
+}
+.dj_safari .tundra .dijitTextBoxReadOnly,
+.dj_safari .tundra .dijitComboBoxReadOnly,
+.dj_safari .tundra .dijitSpinnerReadOnly,
+.dj_safari .tundra .dijitTextAreaReadOnly {
+	color: #eee;
+}
+
+.tundra .dijitSliderReadOnly {
+	opacity:0.6 !important;
+}
+
+.dj_ie6 .tundra .dijitSliderReadOnly,
+.dj_ie6 .tundra .dijitSliderReadOnly .dijitRuleContainer,
+.dj_ie6 .tundra .dijitSliderReadOnly .dijitSliderRemainingBar,
+.dj_ie6 .tundra .dijitSliderReadOnly .dijitSliderProgressBar {
+	filter: gray() alpha(opacity=40);
+}
+
+.tundra .dijitSliderReadOnly * {
+	cursor: not-allowed !important;
+}
+
+/**** ReadOnly cursor *****/
+.tundra .dijitSliderReadOnly *,
+.tundra .dijitReadOnlyClickableRegion,	/* a region the user would be able to click on, but it's ReadOnly */
+.tundra .dijitSpinnerReadOnly *,
+.tundra .dijitButtonReadOnly *,
+.tundra .dijitDropDownButtonReadOnly *,
+.tundra .dijitComboButtonReadOnly *,
+.tundra .dijitComboBoxReadOnly *
+{
+	cursor: not-allowed !important;
+}
+
+.dijit_a11y .dijitButtonReadOnly .dijitButtonNode,
+.dijit_a11y .dijitDropDownButtonReadOnly .dijitButtonNode,
+.dijit_a11y .dijitComboButtonReadOnly .dijitButtonNode,
+.dijit_a11y .dijitComboBoxReadOnly .dijitInputField,
+.dijit_a11y .dijitComboBoxReadOnly .dijitButtonNode,
+.dijit_a11y .dijitSpinnerReadOnly .dijitButtonNode,
+.dijit_a11y .dijitSpinnerReadOnly .dijitInputField {
+	border-style: outset!important;
+	border-width: medium!important;
+	border-color: #999 !important;
+	color:#999 !important;
+}
+
+.tundra .dijitTextBoxDisabled, 
+.tundra .dijitComboBoxDisabled, 
+.tundra .dijitSpinnerDisabled, 
+.tundra .dijitTextAreaDisabled,
+.tundra .dijitTextBoxReadOnly, 
+.tundra .dijitComboBoxReadOnly, 
+.tundra .dijitSpinnerReadOnly, 
+.tundra .dijitTextAreaReadOnly {
+	background:#E4E4E4 url("../dijit/themes/tundra/images/buttonDisabled.png") repeat-x scroll center top;
+}

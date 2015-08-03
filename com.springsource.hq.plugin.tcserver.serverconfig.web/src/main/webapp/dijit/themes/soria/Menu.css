@@ -1,0 +1,79 @@
+/*
+ * Copyright (C) 2009-2015  Pivotal Software, Inc
+ *
+ * This program is is free software; you can redistribute it and/or modify
+ * it under the terms version 2 of the GNU General Public License as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+
+.soria .dijitMenu,
+.soria .dijitMenuBar {
+	border: 1px solid #cbcbcb;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+}
+.soria .dijitBorderContainer .dijitMenuBar {
+	border:1px solid #B1BADF;
+}
+.soria .dijitMenuItem {
+	font-family: sans-serif;
+	margin: 0px;
+	color: #243C5F;
+}
+.soria .dijitMenuBar .dijitMenuItem {
+	padding: 4px 5px;
+}
+.soria .dijitMenuPreviousButton, .soria .dijitMenuNextButton {
+	font-style: italic;
+}
+.soria .dijitMenuItem TD {
+	padding:1px;
+}
+.soria .dijitMenuPassive .dijitMenuItemHover,
+.soria .dijitMenuItemSelected {
+	background-color: #d9e6f9; 
+	color: #243C5F;
+}
+.soria .dijitMenuItemIcon {
+	width: 15px;
+	height: 15px;
+}
+.soria .dijitMenuExpand {
+	width:15px;
+	height:15px;
+	background-image: url('images/spriteRoundedIconsSmall.png');
+	background-position: -30px top;
+}
+.dj_ie6 .soria .dijitMenuExpand {
+	background-image: url('images/spriteRoundedIconsSmall.gif');
+}
+.soria .dijitMenuSeparator {
+	height: 1px;
+}
+.soria .dijitMenuSeparatorTop {
+	border-bottom: 1px solid #fff; 
+}
+.soria .dijitMenuSeparatorBottom {
+	border-top: 1px solid #8ba0bd;
+}
+.soria .dijitCheckedMenuItemIconChar {
+	display: none;
+}
+.soria .dijitCheckedMenuItemIcon {
+	background-image: url('images/spriteCheckbox.gif');
+	background-position: -80px;
+}
+.soria .dijitCheckedMenuItemChecked .dijitCheckedMenuItemIcon {
+	background-position: -64px;
+}

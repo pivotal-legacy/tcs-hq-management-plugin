@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:include schemaLocation="Response.xsd" />
+
+
+	<!-- Application objects -->
+	
+	<xs:complexType name="Result">
+		<xs:sequence>
+			<xs:element name="Service" type="Service" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Application">
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="status" type="xs:string" />
+		<xs:attribute name="sessions" type="xs:string" />
+		<xs:attribute name="version" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:complexType name="Host">
+		<xs:sequence>
+			<xs:element name="Application" type="Application" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="Service">
+		<xs:sequence>
+			<xs:element name="Host" type="Host" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+	
+
+
+	<!-- Application Responses -->
+
+	<xs:element name="ApplicationManagementResponse">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Response">
+					<xs:sequence>
+						<xs:element name="Result" type="Result"/>
+						<xs:element name="StatusResponse" type="StatusResponse" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+
+</xs:schema>

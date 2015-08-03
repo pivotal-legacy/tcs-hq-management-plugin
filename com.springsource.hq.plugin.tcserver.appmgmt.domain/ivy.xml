@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://ivyrep.jayasoft.org/ivy-doc.xsl"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<ivy-module
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://incubator.apache.org/ivy/schemas/ivy.xsd"
+        version="1.3">
+
+    <info organisation="com.springsource.hq.plugin.tcserver" module="${ant.project.name}">
+        <ivyauthor name="Greg Turnquist"/>
+    </info>
+
+    <configurations>
+        <include file="${spring.build.dir}/common/default-ivy-configurations.xml"/>
+    </configurations>
+
+    <publications>
+        <artifact name="${ant.project.name}"/>
+        <artifact name="${ant.project.name}-sources" type="src" ext="jar"/>
+    </publications>
+
+    <dependencies>
+    </dependencies>
+
+
+</ivy-module>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+<ivysettings>
+
+	<typedef name="s3" classname="org.springframework.aws.ivy.S3Resolver"/>
+
+	<settings defaultResolver="external-lookup" defaultLatestStrategy="latest-lexico"/>
+
+	<caches resolutionCacheDir="${ivy.cache.dir}/resolution" repositoryCacheDir="${ivy.cache.dir}/repository"
+			ivyPattern="[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"
+			artifactPattern="[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"
+			useOrigin="true" checkUpToDate="false">
+		<cache name="maven" artifactPattern="[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"/>
+	</caches>
+
+	<macrodef name="s3repo">
+		<attribute name="bucket"/>
+		<attribute name="artifact.type"/>
+		<attribute name="release.type"/>
+		<s3 descriptor="required" accessKey="${accessKey}" secretKey="${secretKey}">
+			<ivy pattern="s3://@{bucket}/ivy/@{artifact.type}/@{release.type}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+			<artifact pattern="s3://@{bucket}/ivy/@{artifact.type}/@{release.type}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+		</s3>
+	</macrodef>
+
+	<macrodef name="localrepo">
+		<filesystem descriptor="required">
+			<ivy pattern="${local.repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+			<artifact pattern="${local.repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+		</filesystem>
+	</macrodef>
+
+	<resolvers>
+<!-- Integration repositories -->
+		<filesystem name="integration" descriptor="required">
+			<ivy pattern="${integration.repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+			<artifact pattern="${integration.repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+		</filesystem>
+		
+		<chain name="hyperic-lookup" returnFirst="true">
+			<ibiblio name="private-hyperic-release" cache="maven" m2compatible="true" root="http://private.maven.hyperic.com/release"/>
+			<ibiblio name="private-hyperic-milestone" cache="maven" m2compatible="true" root="http://private.maven.hyperic.com/milestone"/>
+			<ibiblio name="private-hyperic-snapshot" cache="maven" m2compatible="true" root="http://private.maven.hyperic.com/snapshot"/>
+			<ibiblio name="private-hyperic-external" cache="maven" m2compatible="true" root="http://private.maven.hyperic.com/external"/>
+			<ibiblio name="private-springsource-external" cache="maven" m2compatible="true" root="http://private.maven.springsource.com/external"/>
+				
+			<ibiblio name="hyperic-release" cache="maven" m2compatible="true" root="http://maven.hyperic.org/release"/>
+			<ibiblio name="hyperic-milestone" cache="maven" m2compatible="true" root="http://maven.hyperic.org/milestone"/>	
+			<ibiblio name="hyperic-snapshot" cache="maven" m2compatible="true" root="http://maven.hyperic.org/snapshot"/>
+			<ibiblio name="hyperic-external" cache="maven" m2compatible="true" root="http://maven.hyperic.org/external"/>
+		</chain>
+		
+		<chain name="hqapi-lookup" returnFirst="true">
+			<ibiblio name="hqapi-release" cache="maven" m2compatible="true" root="http://maven.hyperic.org/hqapi/release"/>
+			<ibiblio name="hqapi-milestone" cache="maven" m2compatible="true" root="http://maven.hyperic.org/hqapi/milestone"/>
+			<ibiblio name="hqapi-snapshot" cache="maven" m2compatible="true" root="http://maven.hyperic.org/hqapi/snapshot"/>
+		</chain>
+
+<!-- Lookup repositories -->
+		<chain name="external-lookup" returnFirst="true">
+			<localrepo name="local-external-repository"/>
+			<s3repo name="bundle-external-repository"	bucket="repository.springsource.com" artifact.type="bundles" release.type="external"/>
+			<s3repo name="library-external-repository"	bucket="repository.springsource.com" artifact.type="libraries" release.type="external"/>
+		</chain>
+
+		<chain name="spring-portfolio-lookup" returnFirst="true">
+			<resolver ref="integration"/>
+			<localrepo name="local"/>
+			<s3repo name="bundle-release-repository"	bucket="repository.springsource.com" artifact.type="bundles" release.type="release"/>
+			<s3repo name="bundle-milestone-repository"	bucket="repository.springsource.com" artifact.type="bundles" release.type="milestone"/>
+			<s3repo name="bundle-snapshot-repository"	bucket="repository.springsource.com" artifact.type="bundles" release.type="snapshot"/>
+			<s3repo name="private-bundle-release-repository"	bucket="private.repository.springsource.com" artifact.type="bundles" release.type="release"/>
+			<s3repo name="private-bundle-milestone-repository"	bucket="private.repository.springsource.com" artifact.type="bundles" release.type="milestone"/>
+			<s3repo name="private-bundle-snapshot-repository"	bucket="private.repository.springsource.com" artifact.type="bundles" release.type="snapshot"/>
+			<s3repo name="library-release-repository"	bucket="repository.springsource.com" artifact.type="libraries" release.type="release"/>
+			<s3repo name="library-milestone-repository"	bucket="repository.springsource.com" artifact.type="libraries" release.type="milestone"/>
+			<s3repo name="library-snapshot-repository"	bucket="repository.springsource.com" artifact.type="libraries" release.type="snapshot"/>
+			<s3repo name="private-library-release-repository"	bucket="private.repository.springsource.com" artifact.type="libraries" release.type="release"/>
+			<s3repo name="private-library-milestone-repository"	bucket="private.repository.springsource.com" artifact.type="libraries" release.type="milestone"/>
+			<s3repo name="private-library-snapshot-repository"	bucket="private.repository.springsource.com" artifact.type="libraries" release.type="snapshot"/>
+		</chain>
+		
+		<ibiblio name="maven-central" cache="maven" m2compatible="true"/>
+
+<!-- Publishing repositories -->
+		<s3repo name="ebr-bundle-publish"	bucket="${publish.bucket}"	artifact.type="bundles" 	release.type="${adjusted.release.type}"/>
+		<s3repo name="ebr-library-publish"	bucket="${publish.bucket}"	artifact.type="libraries"	release.type="${adjusted.release.type}"/>
+		<localrepo name="local-bundle-publish"/>
+		<localrepo name="local-library-publish"/>
+	</resolvers>
+
+	<modules>
+		<module organisation="org.springframework.*"	name="*"	resolver="spring-portfolio-lookup"/>
+		<module organisation="com.springsource.*"		name="*"	resolver="spring-portfolio-lookup"/>
+		<module organisation="com.hyperic.*"			name="*"	resolver="hyperic-lookup"/>
+		<module organisation="org.hyperic.hq.hqapi"		name="*"	resolver="hqapi-lookup"/>
+		<module organisation="org.hyperic*"				name="*"	resolver="hyperic-lookup"/>
+		<module organisation="org.hyperic.*"			name="*"	resolver="hyperic-lookup"/>
+		<module organisation="org.apache.cxf"			name="*"	resolver="maven-central"/>
+	</modules>
+
+</ivysettings>

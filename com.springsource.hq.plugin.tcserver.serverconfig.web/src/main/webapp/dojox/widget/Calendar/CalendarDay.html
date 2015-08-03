@@ -1,0 +1,40 @@
+<!--
+  ~ Copyright (C) 2009-2015  Pivotal Software, Inc
+  ~
+  ~ This program is is free software; you can redistribute it and/or modify
+  ~ it under the terms version 2 of the GNU General Public License as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<div class="dijitCalendarDayLabels" style="left: 0px;" dojoAttachPoint="dayContainer">
+	<div dojoAttachPoint="header">
+		<div dojoAttachPoint="monthAndYearHeader">
+			<span dojoAttachPoint="monthLabelNode" class="dojoxCalendarMonthLabelNode"></span>
+			<span dojoAttachPoint="headerComma" class="dojoxCalendarComma">,</span>
+			<span dojoAttachPoint="yearLabelNode" class="dojoxCalendarDayYearLabel"></span>
+		</div>
+	</div>
+	<table cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+		<thead>
+			<tr>
+				<td class="dijitCalendarDayLabelTemplate"><div class="dijitCalendarDayLabel"></div></td>
+			</tr>
+		</thead>
+		<tbody dojoAttachEvent="onclick: _onDayClick">
+			<tr class="dijitCalendarWeekTemplate">
+				<td class="dojoxCalendarNextMonth dijitCalendarDateTemplate">
+					<div class="dijitCalendarDateLabel"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
