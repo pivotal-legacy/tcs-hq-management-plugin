@@ -11,6 +11,7 @@ NOTE:
 
 
 ```
+cd build-tcserver-plugin
 ./ant clean jar package
 ```
 This will clean the build directory and assemble the tc Server plugin bundle. It will place the assembled bundles in 'build-tcserver-plugin/target/artifacts/'.  It will also create a staging area of the expanded artifact in 'build-tcserver-plugin/target/package-expanded/' which can be used to quickly examine the contents of the zip artifact.
