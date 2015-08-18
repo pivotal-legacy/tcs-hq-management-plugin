@@ -24,6 +24,8 @@ This will clean the build directory and assemble the tc Server plugin bundle. It
 ## Repository Requirements
 * git submodule update --init (This will grab the dependent build system 'spring-build')
  
+## License
 
+This plugin is licensed under the GPL v2 license. Please see LICENSE for full text.
 
 
