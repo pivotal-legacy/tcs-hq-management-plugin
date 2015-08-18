@@ -12,11 +12,11 @@ How Do I Get Started?
 See the "Getting Started with tc Server" Guide for conceptual information about tc Server, as
 well as installation and usage instructions:
 
-	https://www.vmware.com/support/pubs/vfabric-tcserver.html
+	http://tcserver.docs.pivotal.io/
 
 In particular, see the tutorial on using Hyperic HQEE to manage and monitor tc Server instances:
 
-	http://pubs.vmware.com/vfabric52/index.jsp?topic=/com.vmware.vfabric.tc-server.2.8/getting-started/tuthyperic.html
+	http://tcserver.docs.pivotal.io/docs-tcserver/topics/tuthyperic.html
 
 
 To install this plugin into an existing Hyperic HQEE 5.x Server:
@@ -38,7 +38,6 @@ See the Hyperic HQ Documentation of instructions on starting and stopping the HQ
 
 See the following links for additional information about tc Server:
 
-	* Product Information: http://www.vmware.com/products/vfabric-tcserver
-	* General tc Server Documentation: http://www.vmware.com/support/pubs/vfabric-tcserver.html
+	* Product Information: http://www.pivotal.io/products/pivotal-tc-server
+	* General tc Server Documentation: http://tcserver.docs.pivotal.io/
 	* Hyperic HQ Documentation: http://www.vmware.com/support/pubs/vfabric-hyperic.html
-	* tc Server Discussion Forum: http://forum.springsource.org/forumdisplay.php?f=62
