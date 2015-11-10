@@ -19,7 +19,6 @@
 
 <!DOCTYPE plugin [
   <!ENTITY process-metrics SYSTEM "/pdk/plugins/process-metrics.xml">
-  <!ENTITY tc-runtime-8 SYSTEM "/etc/tc-runtime-8.xml">
 ]>
 <plugin package="com.springsource.hq.plugin.tcserver" name="springsource-tcserver">
 	<property name="PLUGIN_VERSION" value="@BUNDLE_VERSION@" />
@@ -613,9 +612,6 @@
 		</service>
 	</server>
    
-    <!-- Import the tc Runtime 8.0 server type -->
-	&tc-runtime-8;
-
 	<!-- ==================== Plugin Help =========================== -->
 	<help name="SpringSource tc Server">
 		<![CDATA[
