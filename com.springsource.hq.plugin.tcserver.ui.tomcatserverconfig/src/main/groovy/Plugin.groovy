@@ -38,7 +38,7 @@ class Plugin extends HQUPlugin {
                 attachType:   'resource',                
                 controller:   TomcatserverconfigController,                
                 action:       'index',                
-                resourceType: ['SpringSource tc Runtime 6.0','SpringSource tc Runtime 7.0', 'Pivotal tc Runtime 8.0'],                
+                resourceType: ['SpringSource tc Runtime 6.0','SpringSource tc Runtime 7.0'],                
                 showAttachmentIf: {a, r, u -> attachmentIsShown(a, r, u)})
     }
     

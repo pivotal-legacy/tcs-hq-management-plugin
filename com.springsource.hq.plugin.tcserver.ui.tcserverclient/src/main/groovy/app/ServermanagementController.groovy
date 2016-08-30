@@ -41,8 +41,6 @@ class ServermanagementController extends BasemanagementController{
 
     private static final String SERVER_TYPE_NAME_7 = "SpringSource tc Runtime 7.0"
     
-    private static final String SERVER_TYPE_NAME_8 = "Pivotal tc Runtime 8.0"
-    
     private static final String ACTION_START = "start"
     
     private static final String ACTION_STOP = "stop"
@@ -57,8 +55,6 @@ class ServermanagementController extends BasemanagementController{
         serverSignature.setServerTypeName(SERVER_TYPE_NAME_6)
         ServerSignature serverSignature2 = new ServerSignature()
         serverSignature.setServerTypeName(SERVER_TYPE_NAME_7)
-        ServerSignature serverSignature3 = new ServerSignature()
-        serverSignature.setServerTypeName(SERVER_TYPE_NAME_8)
         ServerSignature[] signatureArray = new ServerSignature[3]
         signatureArray[0] = serverSignature
         signatureArray[1] = serverSignature2
@@ -99,12 +95,6 @@ class ServermanagementController extends BasemanagementController{
                 for (server in servers) {
                     resources.add(Bootstrap.getBean(ResourceManager).findResource(server.entityId))
                 }
-                servers = Bootstrap.getBean(ServerManager).getServersByPlatform(user,platformId,
-                    Bootstrap.getBean(ServerManager).findServerTypeByName(SERVER_TYPE_NAME_8).getId(),false, PageControl.PAGE_ALL)
-            
-                for (server in servers) {
-                    resources.add(Bootstrap.getBean(ResourceManager).findResource(server.entityId))
-                }
 
                 for (resource in resources) {
                     // Does the user have permissions for the resource? 
@@ -127,15 +117,6 @@ class ServermanagementController extends BasemanagementController{
                 
                 for(resource in resources) {
                     // Does the user have permissions for the resource? 
-                    def convertedResource = convertToAppdefResource(resource)
-                    convertedResource.checkPerms(operation:'view', user:user)
-                    permittedResources << resource
-                }
-                
-                resources = resourceHelper.findByPrototype([byPrototype:SERVER_TYPE_NAME_8])
-                
-                for(resource in resources) {
-                    // Does the user have permissions for the resource?
                     def convertedResource = convertToAppdefResource(resource)
                     convertedResource.checkPerms(operation:'view', user:user)
                     permittedResources << resource

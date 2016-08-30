@@ -536,12 +536,6 @@ class ServerconfigController extends BasemanagementController{
                     return server.id
                 }
             }
-            servers = resourceHelper.findByPrototype([byPrototype:'Pivotal tc Runtime 8.0'])
-            for (server in servers) {
-                if(server.name == servername) {
-                    return server.id
-                }
-            }
         }
         catch (Exception e) {
             throw new Exception("The server name '${servername}' did not match any server resource.")

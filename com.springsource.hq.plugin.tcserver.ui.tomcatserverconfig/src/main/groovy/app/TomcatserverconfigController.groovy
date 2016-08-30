@@ -227,12 +227,9 @@ class TomcatserverconfigController extends BaseController {
 		tcRuntime6ServerConfig.setServerTypeName("SpringSource tc Runtime 6.0");
         ServerSignature tcRuntime7ServerConfig = new ServerSignature();
         tcRuntime7ServerConfig.setServerTypeName("SpringSource tc Runtime 7.0");
-        ServerSignature tcRuntime8ServerConfig = new ServerSignature();
-        tcRuntime7ServerConfig.setServerTypeName("Pivotal tc Runtime 8.0");
-		ServerSignature[] signatureArray = new ServerSignature[3]
+		ServerSignature[] signatureArray = new ServerSignature[2]
 		signatureArray[0] = tcRuntime6ServerConfig
         signatureArray[1] = tcRuntime7ServerConfig
-        signatureArray[2] = tcRuntime8ServerConfig
 		scanConfigurationCore.setServerSignatures(signatureArray)
 		Bootstrap.getBean(AutoinventoryManager.class).startScan(user, resource.getPlatform().entityId, scanConfigurationCore, null, null, null)
 	}

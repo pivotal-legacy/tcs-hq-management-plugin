@@ -33,7 +33,7 @@ class Plugin extends HQUPlugin {
                 attachType:   'resource',
                 controller:   TomcatappmgmtController,
                 action:       'manageApplications',
-                resourceType: ['SpringSource tc Runtime 6.0','SpringSource tc Runtime 7.0', 'Pivotal tc Runtime 8.0'])
+                resourceType: ['SpringSource tc Runtime 6.0','SpringSource tc Runtime 7.0'])
 
 		
     }
