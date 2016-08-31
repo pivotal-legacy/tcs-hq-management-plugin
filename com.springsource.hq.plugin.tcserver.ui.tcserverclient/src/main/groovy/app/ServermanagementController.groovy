@@ -54,11 +54,10 @@ class ServermanagementController extends BasemanagementController{
         ServerSignature serverSignature = new ServerSignature()
         serverSignature.setServerTypeName(SERVER_TYPE_NAME_6)
         ServerSignature serverSignature2 = new ServerSignature()
-        serverSignature.setServerTypeName(SERVER_TYPE_NAME_7)
-        ServerSignature[] signatureArray = new ServerSignature[3]
+        serverSignature2.setServerTypeName(SERVER_TYPE_NAME_7)
+        ServerSignature[] signatureArray = new ServerSignature[2]
         signatureArray[0] = serverSignature
         signatureArray[1] = serverSignature2
-        signatureArray[2] = serverSignature3
         scanConfigurationCore.setServerSignatures(signatureArray)
         Bootstrap.getBean(AutoinventoryManager).startScan(user, resource.getPlatform().entityId, scanConfigurationCore, null, null, null)
     }
