@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -14,7 +14,7 @@ var _1;
 var _2="org.openajax.hub.";
 var h={};
 this.hub=h;
-h.implementer="http://openajax.org";
+h.implementer="http://www.openajax.org/";
 h.implVersion="0.6";
 h.specVersion="0.6";
 h.implExtraData={};
@@ -142,7 +142,7 @@ h.reinit=function(){
 for(var lib in OpenAjax.hub.libraries){
 delete OpenAjax.hub.libraries[lib];
 }
-OpenAjax.hub.registerLibrary("OpenAjax","http://openajax.org/hub","0.6",{});
+OpenAjax.hub.registerLibrary("OpenAjax","http://www.openajax.org/hub","0.6",{});
 delete OpenAjax._subscriptions;
 OpenAjax._subscriptions={c:{},s:[]};
 delete OpenAjax._cleanup;
@@ -151,5 +151,5 @@ OpenAjax._subIndex=0;
 OpenAjax._pubDepth=0;
 };
 };
-OpenAjax.hub.registerLibrary("OpenAjax","http://openajax.org/hub","0.6",{});
+OpenAjax.hub.registerLibrary("OpenAjax","http://www.openajax.org/hub","0.6",{});
 }

@@ -110,7 +110,7 @@ Installation instructions
 	you can safely import the whole widget project into your 
 	dojox/ root directory from the following SVN url:
 
-	http://svn.dojotoolkit.org/src/dojox/trunk/widget
+	https://svn.dojotoolkit.org/src/dojox/trunk/widget
 
 -------------------------------------------------------------------------------
 Other Notes (Brief widget list):

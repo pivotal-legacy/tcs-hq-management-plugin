@@ -56,10 +56,10 @@ Documentation
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid/*
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/secure/*
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/encoding/digests/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/secure/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/encoding/digests/*
 
 Install into the following directory structure:
 /dojox/uuid/
@@ -69,7 +69,7 @@ Install into the following directory structure:
 AND
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/*
 
 Install into the following directory structure:
 /dojox/io/

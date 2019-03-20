@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -9,7 +9,7 @@ if(!dojo._hasResource["dojox.embed.Quicktime"]){
 dojo._hasResource["dojox.embed.Quicktime"]=true;
 dojo.provide("dojox.embed.Quicktime");
 (function(d){
-var _1,_2={major:0,minor:0,rev:0},_3,_4={width:320,height:240,redirect:null},_5="dojox-embed-quicktime-",_6=0,_7="This content requires the <a href=\"http://www.apple.com/quicktime/download/\" title=\"Download and install QuickTime.\">QuickTime plugin</a>.";
+var _1,_2={major:0,minor:0,rev:0},_3,_4={width:320,height:240,redirect:null},_5="dojox-embed-quicktime-",_6=0,_7="This content requires the <a href=\"https://www.apple.com/quicktime/download/\" title=\"Download and install QuickTime.\">QuickTime plugin</a>.";
 function _8(_9){
 _9=d.mixin(d.clone(_4),_9||{});
 if(!("path" in _9)&&!_9.testing){
@@ -49,7 +49,7 @@ _a=_8(_a);
 if(!_a){
 return null;
 }
-var s="<object classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" "+"codebase=\"http://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0\" "+"id=\""+_a.id+"\" "+"width=\""+_a.width+"\" "+"height=\""+_a.height+"\">"+"<param name=\"src\" value=\""+_a.path+"\"/>";
+var s="<object classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" "+"codebase=\"https://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0\" "+"id=\""+_a.id+"\" "+"width=\""+_a.width+"\" "+"height=\""+_a.height+"\">"+"<param name=\"src\" value=\""+_a.path+"\"/>";
 for(var p in _a.params||{}){
 s+="<param name=\""+p+"\" value=\""+_a.params[p]+"\"/>";
 }

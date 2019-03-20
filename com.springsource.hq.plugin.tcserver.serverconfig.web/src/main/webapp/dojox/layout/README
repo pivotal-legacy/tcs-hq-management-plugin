@@ -88,8 +88,8 @@ Installation:
 
 	checkout:
 
-	http://svn.dojotoolkit.org/src/dojox/trunk/layout/
-	http://svn.dojotoolkit.org/src/dijit/trunk/
+	https://svn.dojotoolkit.org/src/dojox/trunk/layout/
+	https://svn.dojotoolkit.org/src/dijit/trunk/
 
 	and require via:
 		dojo.require("dojox.layout.FloatingPane");

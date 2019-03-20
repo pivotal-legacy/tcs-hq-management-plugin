@@ -48,8 +48,8 @@ Installation instructions
 
 Grab the following from the Dojo SVN Repository:
 
-http://svn.dojotoolkit.org/src/dojox/trunk/embed/*
-http://svn.dojotoolkit.org/src/dojox/trunk/av/*
+https://svn.dojotoolkit.org/src/dojox/trunk/embed/*
+https://svn.dojotoolkit.org/src/dojox/trunk/av/*
 
 Install into the following directory structure:
 /dojox/av/

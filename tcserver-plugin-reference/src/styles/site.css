@@ -589,7 +589,7 @@ h6 {
     color: #666666;
 }
 
-/* css hack found here:  http://www.fo3nix.pwp.blueyonder.co.uk/tutorials/css/hacks/ */
+/* css hack found here:  https://www.fo3nix.pwp.blueyonder.co.uk/tutorials/css/hacks/ */
 .navItemOver { font-size: 10px; font-weight: bold; color: #ffffff; background-color: #003366; cursor: hand; voice-family: '\'}\''; voice-family:inherit; cursor: pointer;}
 .navItemOver a { color: #ffffff; background-color:#003366; text-decoration: none; }
 .navItemOver a:visited { color: #ffffff; background-color:#003366; text-decoration: none; }

@@ -33,7 +33,7 @@ Installation instructions
 To use the XMPP test, you should have the appropriate server installed on your
 machine. We reccomend Openfire, a real time collaboration server licensed under
 the Open Source GPL.:
-http://www.igniterealtime.org/projects/openfire/index.jsp
+https://www.igniterealtime.org/projects/openfire/index.jsp
 
 It's very easy to install. Download the version for your machine and launch the installer.
 After installation is complete, server settings are made at:

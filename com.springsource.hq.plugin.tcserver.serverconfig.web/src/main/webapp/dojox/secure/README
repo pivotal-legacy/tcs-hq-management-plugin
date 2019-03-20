@@ -41,7 +41,7 @@ Documentation
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/secure/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/secure/*
 
 Install into the following directory structure:
 /dojox/secure/

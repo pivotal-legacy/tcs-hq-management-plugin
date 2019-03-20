@@ -28,7 +28,7 @@ import com.springsource.hq.plugin.tcserver.serverconfig.BindableAttributes;
 import com.springsource.hq.plugin.tcserver.serverconfig.Hierarchical;
 
 /**
- * Settings for basic JDBC connections (http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html)
+ * Settings for basic JDBC connections (https://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html)
  * 
  * @since 2.0
  */

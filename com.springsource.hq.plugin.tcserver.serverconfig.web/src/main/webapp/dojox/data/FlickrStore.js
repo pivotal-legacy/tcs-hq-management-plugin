@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -135,7 +135,7 @@ return _22;
 return str.replace(/&amp;/gm,"&").replace(/&lt;/gm,"<").replace(/&gt;/gm,">").replace(/&quot;/gm,"\"").replace(/&#39;/gm,"'");
 }});
 dojo.extend(dojox.data.FlickrStore,dojo.data.util.simpleFetch);
-var _24="http://api.flickr.com/services/feeds/";
+var _24="https://www.flickr.com/services/feeds/";
 var reg=dojox.data.FlickrStore.urlRegistry=new d.AdapterRegistry(true);
 reg.register("group pool",function(_25){
 return !!_25.query["groupid"];

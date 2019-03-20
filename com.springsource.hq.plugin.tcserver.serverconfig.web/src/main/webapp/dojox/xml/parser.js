@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -16,7 +16,7 @@ if(_1&&dojo.trim(_1)&&"DOMParser" in dojo.global){
 var _5=new DOMParser();
 _4=_5.parseFromString(_1,_2);
 var de=_4.documentElement;
-var _6="http://www.mozilla.org/newlayout/xml/parsererror.xml";
+var _6="https://www.mozilla.org/newlayout/xml/parsererror.xml";
 if(de.nodeName=="parsererror"&&de.namespaceURI==_6){
 var _7=de.getElementsByTagNameNS(_6,"sourcetext")[0];
 if(_7){

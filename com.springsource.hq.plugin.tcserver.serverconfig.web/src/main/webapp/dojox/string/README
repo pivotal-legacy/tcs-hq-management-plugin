@@ -26,12 +26,12 @@ Dojo Core (package loader).
 -------------------------------------------------------------------------------
 Documentation
 
-See the Dojo Toolkit API docs (http://dojotookit.org/api), dojo.string.Builder.
+See the Dojo Toolkit API docs (https://dojotookit.org/api), dojo.string.Builder.
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/string/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/string/*
 
 Install into the following directory structure:
 /dojox/string/

@@ -151,24 +151,24 @@ Documentation
 The plugins directory contains extensions which work with dijit.Editor.
 
 See also:
-	http://docs.dojocampus.org/dojox/editor/plugins/TablePlugins
-	http://docs.dojocampus.org/dojox/editor/plugins/PrettyPrint
-	http://docs.dojocampus.org/dojox/editor/plugins/PageBreak
-	http://docs.dojocampus.org/dojox/editor/plugins/ShowBlockNodes
-	http://docs.dojocampus.org/dojox/editor/plugins/Preview
-	http://docs.dojocampus.org/dojox/editor/plugins/Save
-	http://docs.dojocampus.org/dojox/editor/plugins/ToolbarLineBreak
-	http://docs.dojocampus.org/dojox/editor/plugins/InsertEntity
-	http://docs.dojocampus.org/dojox/editor/plugins/NormalizeIndentOutdent
-	http://docs.dojocampus.org/dojox/editor/plugins/Breadcrumb
-        http://docs.dojocampus.org/dojox/editor/plugins/FindReplace
-        http://docs.dojocampus.org/dojox/editor/plugins/CollapsibleToolbar
-	http://docs.dojocampus.org/dojox/editor/plugins/Blockquote
-	http://docs.dojocampus.org/dojox/editor/plugins/PasteFromWord
-	http://docs.dojocampus.org/dojox/editor/plugins/InsertAnchor       
-	http://docs.dojocampus.org/dojox/editor/plugins/TextColor
-	http://docs.dojocampus.org/dojox/editor/plugins/NormalizeStyle
-	http://docs.dojocampus.org/dojox/editor/plugins/StatusBar 
+	https://docs.dojocampus.org/dojox/editor/plugins/TablePlugins
+	https://docs.dojocampus.org/dojox/editor/plugins/PrettyPrint
+	https://docs.dojocampus.org/dojox/editor/plugins/PageBreak
+	https://docs.dojocampus.org/dojox/editor/plugins/ShowBlockNodes
+	https://docs.dojocampus.org/dojox/editor/plugins/Preview
+	https://docs.dojocampus.org/dojox/editor/plugins/Save
+	https://docs.dojocampus.org/dojox/editor/plugins/ToolbarLineBreak
+	https://docs.dojocampus.org/dojox/editor/plugins/InsertEntity
+	https://docs.dojocampus.org/dojox/editor/plugins/NormalizeIndentOutdent
+	https://docs.dojocampus.org/dojox/editor/plugins/Breadcrumb
+        https://docs.dojocampus.org/dojox/editor/plugins/FindReplace
+        https://docs.dojocampus.org/dojox/editor/plugins/CollapsibleToolbar
+	https://docs.dojocampus.org/dojox/editor/plugins/Blockquote
+	https://docs.dojocampus.org/dojox/editor/plugins/PasteFromWord
+	https://docs.dojocampus.org/dojox/editor/plugins/InsertAnchor       
+	https://docs.dojocampus.org/dojox/editor/plugins/TextColor
+	https://docs.dojocampus.org/dojox/editor/plugins/NormalizeStyle
+	https://docs.dojocampus.org/dojox/editor/plugins/StatusBar 
 
 -------------------------------------------------------------------------------
 Plugin Installation instructions

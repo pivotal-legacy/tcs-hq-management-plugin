@@ -66,7 +66,7 @@ class TcServerAppMgmtControllerTest extends TcServerAppMgmtControllerTestCase {
         MockServletConfig config = new MockServletConfig()
         config.getServletContext().setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, 
             new StaticWebApplicationContext())
-        HttpServletRequest request = new MockHttpServletRequest("POST", "http://locallhost")
+        HttpServletRequest request = new MockHttpServletRequest("POST", "https://locallhost")
         request.addParameter("eid", "1234567")
         HttpServletResponse response = new MockHttpServletResponse()
         

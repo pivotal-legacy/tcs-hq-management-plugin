@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -55,7 +55,7 @@ return major+"."+minor+"."+patch+flag+" ("+revision+")";
 }
 }};
 if(typeof OpenAjax!="undefined"){
-OpenAjax.hub.registerLibrary(dojo._scopeName,"http://dojotoolkit.org",d.version.toString());
+OpenAjax.hub.registerLibrary(dojo._scopeName,"https://dojotoolkit.org",d.version.toString());
 }
 var _4,_5,_6={};
 for(var i in {toString:1}){

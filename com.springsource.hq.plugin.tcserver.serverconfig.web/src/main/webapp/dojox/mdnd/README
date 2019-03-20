@@ -45,7 +45,7 @@ Installation:
 
 	checkout:
 
-	http://svn.dojotoolkit.org/src/dojox/trunk/mdnd/
+	https://svn.dojotoolkit.org/src/dojox/trunk/mdnd/
 
 	and require via:
 		dojo.require("dojox.mdnd.AreaManager");

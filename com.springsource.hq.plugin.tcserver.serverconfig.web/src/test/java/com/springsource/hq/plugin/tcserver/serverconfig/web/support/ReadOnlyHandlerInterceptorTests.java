@@ -109,7 +109,7 @@ public class ReadOnlyHandlerInterceptorTests {
     @Test
     public void postHandle_redirect() throws Exception {
         request.setPathInfo("/eid/");
-        modelAndView.setViewName("redirect:http://www.springsource.com/");
+        modelAndView.setViewName("redirect:https://www.springsource.com/");
 
         assertTrue(modelAndView.isReference());
         interceptor.postHandle(request, response, null, modelAndView);

@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -24,7 +24,7 @@ if(!this.maxResults){
 this.maxResults=20;
 }
 }
-},_picasaUrl:"http://picasaweb.google.com/data/feed/api/all",_storeRef:"_S",label:"title",urlPreventCache:false,maxResults:20,_assertIsItem:function(_2){
+},_picasaUrl:"https://picasaweb.google.com/data/feed/api/all",_storeRef:"_S",label:"title",urlPreventCache:false,maxResults:20,_assertIsItem:function(_2){
 if(!this.isItem(_2)){
 throw new Error("dojox.data.PicasaStore: a function was passed an item argument that was not an item");
 }

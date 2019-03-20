@@ -35,7 +35,7 @@ xip_server.html: none (but see Additional Notes section)
 Documentation
 
 There is some documentation that applies to the Dojo 0.4.x version of these files:
-http://dojotoolkit.org/book/dojo-book-0-4/part-5-connecting-pieces/i-o/cross-domain-xmlhttprequest-using-iframe-proxy
+https://dojotoolkit.org/book/dojo-book-0-4/part-5-connecting-pieces/i-o/cross-domain-xmlhttprequest-using-iframe-proxy
 
 The general theory still applies to this code, but the specifics are different
 for the Dojo 0.9+ codebase. Doc updates hopefully after the basic code is ported.
@@ -47,8 +47,8 @@ suited for doing polling cross-domain requests.
 Installation instructions
 
 Grab the following from the Dojox SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip_client.html
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip_client.html
 
 Install into the following directory structure:
 /dojox/io/proxy/
@@ -56,7 +56,7 @@ Install into the following directory structure:
 ...which should be at the same level as your Dojo checkout.
 
 Grab the following from the Dojox SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip_server.html
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/io/proxy/xip_server.html
 
 and install it on the domain that you want to allow receiving cross-domain
 requests. Be sure to read the documentation, the Additional Notes below, and

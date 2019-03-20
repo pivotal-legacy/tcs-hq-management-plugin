@@ -16,7 +16,7 @@ once and rendered indefinitely afterwards. It uses a simple system of tags
 and filters.
 
 This is a 1:1 match with the Django Template Language as outlined in
-http://www.djangoproject.com/documentation/templates/. All applicable tags and
+https://www.djangoproject.com/documentation/templates/. All applicable tags and
 filters have been implemented (see below), along with new filters and tags as
 necessary (see below).
 
@@ -48,8 +48,8 @@ dijit._Container
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/dtl.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/dtl/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/dtl.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/dtl/*
 
 Install into the following directory structure:
 /dojox/dtl/

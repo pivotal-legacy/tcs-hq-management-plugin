@@ -5,7 +5,7 @@ $secretAccessKey = "secret access key";
 
 
 
-$TARGET_WS = "http://s3.amazonaws.com";
+$TARGET_WS = "https://s3.amazonaws.com";
 
 ob_start();
 

@@ -28,7 +28,7 @@ import com.springsource.hq.plugin.tcserver.serverconfig.BindableAttributes;
 import com.springsource.hq.plugin.tcserver.serverconfig.Hierarchical;
 
 /**
- * Settings for web app logging (http://tomcat.apache.org/tomcat-6.0-doc/config/context.html)
+ * Settings for web app logging (https://tomcat.apache.org/tomcat-6.0-doc/config/context.html)
  * 
  * @since 2.0
  */
