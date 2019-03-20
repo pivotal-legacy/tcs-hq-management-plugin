@@ -28,7 +28,7 @@ Installation instructions
 
 Grab the following from the Dojo SVN Repository:
 
-	http://svn.dojotoolkit.org/dojo/dojox/trunk/testing/*
+	https://svn.dojotoolkit.org/dojo/dojox/trunk/testing/*
 
 Install into the following directory structure:
 

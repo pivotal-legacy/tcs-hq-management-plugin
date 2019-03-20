@@ -34,14 +34,14 @@ Dependencies:
 -------------------------------------------------------------------------------
 Documentation
         Documentatation will reside at:
-        http://docs.dojocampus.org/dojox/mobile
+        https://docs.dojocampus.org/dojox/mobile
 
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/src/dojox/trunk/mobile/*
-http://svn.dojotoolkit.org/src/dojox/trunk/mobile.js
+https://svn.dojotoolkit.org/src/dojox/trunk/mobile/*
+https://svn.dojotoolkit.org/src/dojox/trunk/mobile.js
 
 Install into the following directory structure:
 /dojox/mobile.js

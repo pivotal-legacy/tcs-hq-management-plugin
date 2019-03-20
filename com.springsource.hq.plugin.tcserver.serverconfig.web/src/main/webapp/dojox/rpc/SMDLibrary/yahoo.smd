@@ -1,7 +1,7 @@
 {
 	"SMDVersion": "2.0",
 	// FIXME: is this the kind of value we're supposed to use here?
-	"id": "http://developer.yahoo.com/search/", 
+	"id": "https://developer.yahoo.com/search/", 
 	"description": "Yahoo's search API",
 
 	transport: "JSONP",
@@ -27,9 +27,9 @@
 		//        Yahoo Answers part of the API; just reading a flat listing of methods in this SMD
 		//        likely won't have enough information about what they do. Should we split this up?
 
-		// http://developer.yahoo.com/answers/V1/questionSearch.html
+		// https://developer.yahoo.com/answers/V1/questionSearch.html
 		questionSearch: {
-			target: "http://answers.yahooapis.com/AnswersService/V1/questionSearch",
+			target: "https://answers.yahooapis.com/AnswersService/V1/questionSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "search_in", type: "string", optional: true, "default": "all" }, // can be "all", "question", "best_answer"
@@ -44,9 +44,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/answers/V1/getByCategory.html
+		// https://developer.yahoo.com/answers/V1/getByCategory.html
 		getByCategory: {
-			target: "http://answers.yahooapis.com/AnswersService/V1/getByCategory",
+			target: "https://answers.yahooapis.com/AnswersService/V1/getByCategory",
 			parameters: [
 				{ name: "category_id", type: "integer", optional: true, "default": null }, // one of (category_id, category_name) is required
 				{ name: "category_name", type: "string", optional: true, "default": null },
@@ -58,17 +58,17 @@
 			]
 		},
 
-		// http://developer.yahoo.com/answers/V1/getQuestion.html
+		// https://developer.yahoo.com/answers/V1/getQuestion.html
 		getQuestion: {
-			target: "http://answers.yahooapis.com/AnswersService/V1/getQuestion",
+			target: "https://answers.yahooapis.com/AnswersService/V1/getQuestion",
 			parameters: [
 				{ name: "question_id", type: "string", optional: true, "default": null }
 			]
 		},
 
-		// http://developer.yahoo.com/answers/V1/getByUser.html
+		// https://developer.yahoo.com/answers/V1/getByUser.html
 		getByUser: {
-			target: "http://answers.yahooapis.com/AnswersService/V1/getByUser",
+			target: "https://answers.yahooapis.com/AnswersService/V1/getByUser",
 			parameters: [
 				{ name: "user_id", type: "string", optional: false, "default": "" },
 				{ name: "type", type: "string", optional: true, "default": "all" }, // can be "all", "resolved", "open", "undecided"
@@ -83,9 +83,9 @@
 		// AUDIO SEARCH
 		//
 
-		// http://developer.yahoo.com/search/audio/V1/artistSearch.html
+		// https://developer.yahoo.com/search/audio/V1/artistSearch.html
 		artistSearch: {
-			target: "http://search.yahooapis.com/AudioSearchService/V1/artistSearch",
+			target: "https://search.yahooapis.com/AudioSearchService/V1/artistSearch",
 			parameters: [
 				{ name: "artist", type: "string", optional: true, "default": "" }, // one of (artist, artistid) is required
 				{ name: "artistid", type: "string", optional: true, "default": "" },
@@ -95,9 +95,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/audio/V1/albumSearch.html
+		// https://developer.yahoo.com/search/audio/V1/albumSearch.html
 		albumSearch: {
-			target: "http://search.yahooapis.com/AudioSearchService/V1/albumSearch",
+			target: "https://search.yahooapis.com/AudioSearchService/V1/albumSearch",
 			parameters: [
 				{ name: "artist", type: "string", optional: true, "default": "" },
 				{ name: "artistid", type: "string", optional: true, "default": "" },
@@ -109,10 +109,10 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/audio/V1/songSearch.html
+		// https://developer.yahoo.com/search/audio/V1/songSearch.html
 		songSearch: {
 			// beware, this method has returned many a JSON string containing syntax error(s)
-			target: "http://search.yahooapis.com/AudioSearchService/V1/songSearch",
+			target: "https://search.yahooapis.com/AudioSearchService/V1/songSearch",
 			parameters: [
 				{ name: "artist", type: "string", optional: true, "default": "" },
 				{ name: "artistid", type: "string", optional: true, "default": "" },
@@ -126,9 +126,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/audio/V1/songDownloadLocation.html
+		// https://developer.yahoo.com/search/audio/V1/songDownloadLocation.html
 		songDownloadLocation: {
-			target: "http://search.yahooapis.com/AudioSearchService/V1/songDownloadLocation",
+			target: "https://search.yahooapis.com/AudioSearchService/V1/songDownloadLocation",
 			parameters: [
 				{ name: "songid", type: "string", optional: false, "default": "" },
 				{ name: "results", type: "integer", optional: true, "default": 10 }, // max 50
@@ -141,11 +141,11 @@
 		// CONTENT ANALYSIS
 		//
 		
-		// http://developer.yahoo.com/search/content/V1/termExtraction.html
+		// https://developer.yahoo.com/search/content/V1/termExtraction.html
 		termExtraction: {
 			// FIXME: the API docs say to submit this as a POST, but we need JSONP for cross-domain, right?
 			// transport: "POST",
-			target: "http://search.yahooapis.com/ContentAnalysisService/V1/termExtraction",
+			target: "https://search.yahooapis.com/ContentAnalysisService/V1/termExtraction",
 			parameters: [
 				{ name: "context", type: "string", optional: false, "default": "" },
 				{ name: "query", type: "string", optional: true, "default": "" }
@@ -156,9 +156,9 @@
 		// CONTEXT SEARCH
 		//
 		
-		// http://developer.yahoo.com/search/content/V1/contextSearch.html
+		// https://developer.yahoo.com/search/content/V1/contextSearch.html
 		contextSearch: {
-			target: "http://search.yahooapis.com/WebSearchService/V1/contextSearch",
+			target: "https://search.yahooapis.com/WebSearchService/V1/contextSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: true, "default": "" },
 				{ name: "context", type: "string", optional: false, "default": "" },
@@ -178,9 +178,9 @@
 		// IMAGE SEARCH
 		//
 
-		// http://developer.yahoo.com/search/image/V1/imageSearch.html
+		// https://developer.yahoo.com/search/image/V1/imageSearch.html
 		imageSearch: {
-			target: "http://search.yahooapis.com/ImageSearchService/V1/imageSearch",
+			target: "https://search.yahooapis.com/ImageSearchService/V1/imageSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "type", type: "string", optional: true, "default": "any" }, // can be "all", "any", "phrase"
@@ -197,9 +197,9 @@
 		// LOCAL SEARCH
 		//
 
-		// http://developer.yahoo.com/search/local/V3/localSearch.html
+		// https://developer.yahoo.com/search/local/V3/localSearch.html
 		localSearch: {
-			target: "http://local.yahooapis.com/LocalSearchService/V3/localSearch",
+			target: "https://local.yahooapis.com/LocalSearchService/V3/localSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: true, "default": "" }, // optional, but one of (query, listing_id) is required
 				{ name: "listing_id", type: "string", optional: true, "default": "" },
@@ -220,9 +220,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/local/V1/collectionSearch.html
+		// https://developer.yahoo.com/local/V1/collectionSearch.html
 		collectionSearch: {
-			target: "http://collections.local.yahooapis.com/LocalSearchService/V1/collectionSearch",
+			target: "https://collections.local.yahooapis.com/LocalSearchService/V1/collectionSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: true, "default": "" }, // optional, but at least one of (query, username) is required
 				{ name: "username", type: "string", optional: true, "default": "" },
@@ -232,9 +232,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/local/V1/getCollection.html
+		// https://developer.yahoo.com/local/V1/getCollection.html
 		getCollection: {
-			target: "http://collections.local.yahooapis.com/LocalSearchService/V1/getCollection",
+			target: "https://collections.local.yahooapis.com/LocalSearchService/V1/getCollection",
 			parameters: [
 				{ name: "collection_id", type: "integer", optional: false, "default": "" }
 			]
@@ -244,9 +244,9 @@
 		// MY WEB 2.0
 		//
 
-		// http://developer.yahoo.com/search/myweb/V1/urlSearch.html
+		// https://developer.yahoo.com/search/myweb/V1/urlSearch.html
 		urlSearch: {
-			target: "http://search.yahooapis.com/MyWebService/V1/urlSearch",
+			target: "https://search.yahooapis.com/MyWebService/V1/urlSearch",
 			parameters: [
 				{ name: "tag", type: "string", optional: true, "default": "" },
 				{ name: "yahooid", type: "string", optional: true, "default": "" },
@@ -257,9 +257,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/myweb/V1/tagSearch.html
+		// https://developer.yahoo.com/search/myweb/V1/tagSearch.html
 		tagSearch: {
-			target: "http://search.yahooapis.com/MyWebService/V1/tagSearch",
+			target: "https://search.yahooapis.com/MyWebService/V1/tagSearch",
 			parameters: [
 				{ name: "url", type: "string", optional: true, "default": "" },
 				{ name: "yahooid", type: "string", optional: true, "default": "" },
@@ -270,9 +270,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/myweb/V1/relatedTags.html
+		// https://developer.yahoo.com/search/myweb/V1/relatedTags.html
 		relatedTags: {
-			target: "http://search.yahooapis.com/MyWebService/V1/relatedTags",
+			target: "https://search.yahooapis.com/MyWebService/V1/relatedTags",
 			parameters: [
 				{ name: "tag", type: "string", optional: false, "default": "" },
 				{ name: "yahooid", type: "string", optional: true, "default": "" },
@@ -287,9 +287,9 @@
 		// NEWS SEARCH
 		//
 
-		// http://developer.yahoo.com/search/news/V1/newsSearch.html
+		// https://developer.yahoo.com/search/news/V1/newsSearch.html
 		newsSearch: {
-			target: "http://search.yahooapis.com/NewsSearchService/V1/newsSearch",
+			target: "https://search.yahooapis.com/NewsSearchService/V1/newsSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "type", type: "string", optional: true, "default": "any" }, // can be "all", "any", "phrase"
@@ -305,9 +305,9 @@
 		// SHOPPING
 		//
 
-		// http://developer.yahoo.com/shopping/V2/catalogListing.html
+		// https://developer.yahoo.com/shopping/V2/catalogListing.html
 		catalogListing: {
-			target: "http://shopping.yahooapis.com/ShoppingService/V2/catalogListing",
+			target: "https://shopping.yahoo.com/ShoppingService/V2/catalogListing",
 			parameters: [
 				{ name: "catalogid", type: "integer", optional: true, "default": null }, // required if idtype,idvalue are not specified
 				{ name: "getlisting", type: "boolean", optional: true, "default": 1 },
@@ -323,18 +323,18 @@
 		},
 
 
-		// http://developer.yahoo.com/shopping/V1/merchantSearch.html
+		// https://developer.yahoo.com/shopping/V1/merchantSearch.html
 		merchantSearch: {
-			target: "http://api.shopping.yahoo.com/ShoppingService/V1/merchantSearch",
+			target: "https://api.shopping.yahoo.com/ShoppingService/V1/merchantSearch",
 			parameters: [
 				{ name: "merchantid", type: "integer", optional: false, "default": null }
 			]
 		},
 
 
-		// http://developer.yahoo.com/shopping/V3/productSearch.html
+		// https://developer.yahoo.com/shopping/V3/productSearch.html
 		productSearch: {
-			target: "http://shopping.yahooapis.com/ShoppingService/V3/productSearch",
+			target: "https://shopping.yahoo.com/ShoppingService/V3/productSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: true, "default": "" }, // required if category is not specified
 				{ name: "category", type: "any", optional: true, "default": "" }, // required if query is not specified
@@ -356,9 +356,9 @@
 		// SITE EXPLORER
 		//
 
-		// http://developer.yahoo.com/search/siteexplorer/V1/inlinkData.html
+		// https://developer.yahoo.com/search/siteexplorer/V1/inlinkData.html
 		inlinkData: {
-			target: "http://search.yahooapis.com/SiteExplorerService/V1/inlinkData",
+			target: "https://search.yahooapis.com/SiteExplorerService/V1/inlinkData",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "results", type: "integer", optional: true, "default": 50 }, // max 100
@@ -368,9 +368,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/siteexplorer/V1/pageData.html
+		// https://developer.yahoo.com/search/siteexplorer/V1/pageData.html
 		pageData: {
-			target: "http://search.yahooapis.com/SiteExplorerService/V1/pageData",
+			target: "https://search.yahooapis.com/SiteExplorerService/V1/pageData",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "results", type: "integer", optional: true, "default": 50 }, // max 100
@@ -379,17 +379,17 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/siteexplorer/V1/ping.html
+		// https://developer.yahoo.com/search/siteexplorer/V1/ping.html
 		ping: {
-			target: "http://search.yahooapis.com/SiteExplorerService/V1/ping",
+			target: "https://search.yahooapis.com/SiteExplorerService/V1/ping",
 			parameters: [
 				{ name: "sitemap", type: "string", optional: false, "default": "" }
 			]
 		},
 
-		// http://developer.yahoo.com/search/siteexplorer/V1/updateNotification.html
+		// https://developer.yahoo.com/search/siteexplorer/V1/updateNotification.html
 		updateNotification: {
-			target: "http://search.yahooapis.com/SiteExplorerService/V1/updateNotification",
+			target: "https://search.yahooapis.com/SiteExplorerService/V1/updateNotification",
 			parameters: [
 				{ name: "url", type: "string", optional: false, "default": "" }
 			]
@@ -399,9 +399,9 @@
 		// TRAFFIC
 		//
 
-		// http://developer.yahoo.com/traffic/rest/V1/index.html
+		// https://developer.yahoo.com/traffic/rest/V1/index.html
 		trafficData: {
-			target: "http://local.yahooapis.com/MapsService/V1/trafficData",
+			target: "https://local.yahooapis.com/MapsService/V1/trafficData",
 			parameters: [
 				{ name: "street", type: "string", optional: true, "default": "" },
 				{ name: "city", type: "string", optional: true, "default": "" },
@@ -424,9 +424,9 @@
 		// TRAVEL
 		//
 
-		// http://developer.yahoo.com/travel/tripservice/V1.1/tripSearch.html
+		// https://developer.yahoo.com/travel/tripservice/V1.1/tripSearch.html
 		tripSearch: {
-			target: "http://travel.yahooapis.com/TripService/V1.1/tripSearch",
+			target: "https://travel.yahooapis.com/TripService/V1.1/tripSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: true, "default": "" },
 				{ name: "results", type: "integer", optional: true, "default": 10 }, // max 50
@@ -434,9 +434,9 @@
 			]
 		},
 
-		// http://developer.yahoo.com/travel/tripservice/V1.1/getTrip.html
+		// https://developer.yahoo.com/travel/tripservice/V1.1/getTrip.html
 		getTrip: {
-			target: "http://travel.yahooapis.com/TripService/V1.1/getTrip",
+			target: "https://travel.yahooapis.com/TripService/V1.1/getTrip",
 			parameters: [
 				{ name: "id", type: "integer", optional: false, "default": null }
 			]
@@ -446,11 +446,11 @@
 		// UTILITY SERVICES
 		//
 
-		// http://developer.yahoo.com/util/timeservice/V1/getTime.html
+		// https://developer.yahoo.com/util/timeservice/V1/getTime.html
 		/* RGG: commented out because it refuses to return JSON format even when you tell it
 		        to do so (it returns a <script> tag)
 		getTime: {
-			target: "http://developer.yahooapis.com/TimeService/V1/getTime",
+			target: "https://developer.yahooapis.com/TimeService/V1/getTime",
 			parameters: [
 				{ name: "format", type: "string", optional: true, "default": "unix" } // can be "unix" for unix timestamp, "ms" for milliseconds
 			]
@@ -461,9 +461,9 @@
 		// VIDEO SEARCH
 		//
 
-		// http://developer.yahoo.com/search/video/V1/videoSearch.html
+		// https://developer.yahoo.com/search/video/V1/videoSearch.html
 		videoSearch: {
-			target: "http://search.yahooapis.com/VideoSearchService/V1/videoSearch",
+			target: "https://search.yahooapis.com/VideoSearchService/V1/videoSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "type", type: "string", optional: true, "default": "any" }, // can be "all", "any", "phrase"
@@ -479,9 +479,9 @@
 		// WEB SEARCH
 		//
 
-		// http://developer.yahoo.com/search/web/V1/webSearch.html
+		// https://developer.yahoo.com/search/web/V1/webSearch.html
 		webSearch: {
-			target: "http://search.yahooapis.com/WebSearchService/V1/webSearch",
+			target: "https://search.yahooapis.com/WebSearchService/V1/webSearch",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" }, // must be less than 1kb
 				{ name: "region", type: "string", optional: true, "default": "us" },
@@ -499,17 +499,17 @@
 			]
 		},
 
-		// http://developer.yahoo.com/search/web/V1/spellingSuggestion.html
+		// https://developer.yahoo.com/search/web/V1/spellingSuggestion.html
 		spellingSuggestion: {
-			target: "http://search.yahooapis.com/WebSearchService/V1/spellingSuggestion",
+			target: "https://search.yahooapis.com/WebSearchService/V1/spellingSuggestion",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" }
 			]
 		},
 
-		// http://developer.yahoo.com/search/web/V1/relatedSuggestion.html
+		// https://developer.yahoo.com/search/web/V1/relatedSuggestion.html
 		relatedSuggestion: {
-			target: "http://search.yahooapis.com/WebSearchService/V1/relatedSuggestion",
+			target: "https://search.yahooapis.com/WebSearchService/V1/relatedSuggestion",
 			parameters: [
 				{ name: "query", type: "string", optional: false, "default": "" },
 				{ name: "results", type: "integer", optional: true, "default": 10 } // max 50

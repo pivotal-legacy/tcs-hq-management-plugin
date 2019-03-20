@@ -14,7 +14,7 @@ Project description
 
 jsonPath is a query system similar in idea to xpath, but for use against
 javascript objects.  This code is a port of the jsonPath code at 
-http://code.google.com/p/jsonpath/.  It was contributed under CLA by Stefan
+https://code.google.com/p/jsonpath/.  It was contributed under CLA by Stefan
 Goessner.  Thanks Stefan! 
 
 -------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ Expressions:
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/jsonPath
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/jsonPath
 
 Install into the following directory structure:
 /dojox/jsonPath/

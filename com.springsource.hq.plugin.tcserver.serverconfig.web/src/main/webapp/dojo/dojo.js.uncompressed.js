@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 /*
 	This is an optimized version of Dojo, built for deployment and not for
 	development. To get sources and documentation, please visit:
 
-		http://dojotoolkit.org
+		https://dojotoolkit.org
 */
 
 ;(function(){
@@ -88,11 +88,11 @@ djConfig = {
 	//		`debugAtAllCosts`, it is strongly recommended that you enable this
 	//		flag as a last resort. `debugAtAllCosts` has no effect when loading
 	//		resources across domains. For usage information, see the
-	//		[Dojo Book](http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb)
+	//		[Dojo Book](https://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb)
 	debugAtAllCosts: false,
 	// locale: String
 	//		The locale to assume for loading localized resources in this page,
-	//		specified according to [RFC 3066](http://www.ietf.org/rfc/rfc3066.txt).
+	//		specified according to [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt).
 	//		Must be specified entirely in lowercase, e.g. `en-us` and `zh-cn`.
 	//		See the documentation for `dojo.i18n` and `dojo.requireLocalization`
 	//		for details on loading localized resources. If no locale is specified,
@@ -304,7 +304,7 @@ dojo.global = {
 
 		// Register with the OpenAjax hub
 	if(typeof OpenAjax != "undefined"){
-		OpenAjax.hub.registerLibrary(dojo._scopeName, "http://dojotoolkit.org", d.version.toString());
+		OpenAjax.hub.registerLibrary(dojo._scopeName, "https://dojotoolkit.org", d.version.toString());
 	}
 	
 	var extraNames, extraLen, empty = {};
@@ -1118,7 +1118,7 @@ dojo.global = {
 		//		different packages throughout the source tree.  
 		//
 		//		Each directory is named for a locale as specified by RFC 3066,
-		//		(http://www.ietf.org/rfc/rfc3066.txt), normalized in lowercase.
+		//		(https://www.ietf.org/rfc/rfc3066.txt), normalized in lowercase.
 		//		Note that the two bundles in the example do not define all the
 		//		same variants.  For a given locale, bundles will be loaded for
 		//		that locale and all more general locales above it, including a
@@ -1205,7 +1205,7 @@ dojo.global = {
 
 			// Safari doesn't support this.constructor so we have to be explicit
 			// FIXME: Tracked (and fixed) in Webkit bug 3537.
-			//		http://bugs.webkit.org/show_bug.cgi?id=3537
+			//		https://bugs.webkit.org/show_bug.cgi?id=3537
 			var relobj = new d._Url(_a[i]+""),
 				uriobj = new d._Url(uri[0]+"");
 
@@ -1463,8 +1463,8 @@ if(typeof window != 'undefined'){
 		d.isMac = dav.indexOf("Macintosh") >= 0;
 
 		// safari detection derived from:
-		//		http://developer.apple.com/internet/safari/faq.html#anchor2
-		//		http://developer.apple.com/internet/safari/uamatrix.html
+		//		https://developer.apple.com/internet/safari/faq.html#anchor2
+		//		https://developer.apple.com/internet/safari/uamatrix.html
 		var index = Math.max(dav.indexOf("WebKit"), dav.indexOf("Safari"), 0);
 		if(index && !dojo.isChrome){
 			// try to grab the explicit Safari version first. If we don't get
@@ -1550,7 +1550,7 @@ if(typeof window != 'undefined'){
 		}
 
 		//See if base tag is in use.
-		//This is to fix http://trac.dojotoolkit.org/ticket/3973,
+		//This is to fix https://trac.dojotoolkit.org/ticket/3973,
 		//but really, we need to find out how to get rid of the dojo._Url reference
 		//below and still have DOH work with the dojo.i18n test following some other
 		//test that uses the test frame to load a document (trac #2757).
@@ -1735,7 +1735,7 @@ if(typeof window != 'undefined'){
 			//DOMContentLoaded approximation. Diego Perini found this MSDN article
 			//that indicates doScroll is available after DOM ready, so do a setTimeout
 			//to check when it is available.
-			//http://msdn.microsoft.com/en-us/library/ms531426.aspx
+			//https://msdn.microsoft.com/en-us/library/ms531426.aspx
 			if(!dojo.config.skipIeDomLoaded && self === self.top){
 				dojo._scrollIntervalId = setInterval(function (){
 					try{
@@ -2466,7 +2466,7 @@ dojo.provide("dojo._base.declare");
 
 	function err(msg){ throw new Error("declare: " + msg); }
 
-	// C3 Method Resolution Order (see http://www.python.org/download/releases/2.3/mro/)
+	// C3 Method Resolution Order (see https://www.python.org/download/releases/2.3/mro/)
 	function c3mro(bases){
 		var result = [], roots = [{cls: 0, refs: []}], nameMap = {}, clsCount = 1,
 			l = bases.length, i = 0, j, lin, base, top, proto, rec, name, refs;
@@ -3039,7 +3039,7 @@ dojo.provide("dojo._base.declare");
 		//		Ancestors can be compound classes created by this version of
 		//		dojo.declare. In complex cases all base classes are going to be
 		//		linearized according to C3 MRO algorithm
-		//		(see http://www.python.org/download/releases/2.3/mro/ for more
+		//		(see https://www.python.org/download/releases/2.3/mro/ for more
 		//		details).
 		//
 		//		"className" is cached in "declaredClass" property of the new class,
@@ -4141,7 +4141,7 @@ dojo.provide("dojo._base.json");
 
 dojo.fromJson = function(/*String*/ json){
 	// summary:
-	// 		Parses a [JSON](http://json.org) string to return a JavaScript object.
+	// 		Parses a [JSON](https://json.org) string to return a JavaScript object.
 	// description:
 	// 		Throws for invalid JSON strings, but it does not use a strict JSON parser. It
 	// 		delegates to eval().  The content passed to this method must therefore come
@@ -4166,9 +4166,9 @@ dojo._escapeString = function(/*String*/str){
 dojo.toJsonIndentStr = "\t";
 dojo.toJson = function(/*Object*/ it, /*Boolean?*/ prettyPrint, /*String?*/ _indentStr){
 	//	summary:
-	//		Returns a [JSON](http://json.org) serialization of an object.
+	//		Returns a [JSON](https://json.org) serialization of an object.
 	//	description:
-	//		Returns a [JSON](http://json.org) serialization of an object.
+	//		Returns a [JSON](https://json.org) serialization of an object.
 	//		Note that this doesn't check for infinite recursion, so don't do that!
 	//	it:
 	//		an object to be serialized. Objects may define their own
@@ -5074,7 +5074,7 @@ dojo.provide("dojo._base.event");
 				// munge key/charCode
 				var k=evt.keyCode;
 				// These are Windows Virtual Key Codes
-				// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/WinUI/WindowsUserInterface/UserInput/VirtualKeyCodes.asp
+				// https://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/WinUI/WindowsUserInterface/UserInput/VirtualKeyCodes.asp
 				var unprintable = k!=13 && k!=32 && k!=27 && (k<48||k>90) && (k<96||k>111) && (k<186||k>192) && (k<219||k>222);
 				// synthesize keypress for most unprintables and CTRL-keys
 				if(unprintable||evt.ctrlKey){
@@ -5176,7 +5176,7 @@ dojo.provide("dojo._base.event");
 						//Synthesize an onkeypress event, but only for unprintable characters.
 						var k=evt.keyCode;
 						// These are Windows Virtual Key Codes
-						// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/WinUI/WindowsUserInterface/UserInput/VirtualKeyCodes.asp
+						// https://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/WinUI/WindowsUserInterface/UserInput/VirtualKeyCodes.asp
 						var unprintable = k!=13 && k!=32 && (k<48 || k>90) && (k<96 || k>111) && (k<186 || k>192) && (k<219 || k>222);
 						// synthesize keypress for most unprintables and CTRL-keys
 						if(unprintable || evt.ctrlKey){
@@ -5388,7 +5388,7 @@ if(dojo.isIE || dojo.isOpera){
 				_destroyDoc = doc;
 			}
 			_destroyContainer.appendChild(node.parentNode ? node.parentNode.removeChild(node) : node);
-			// NOTE: see http://trac.dojotoolkit.org/ticket/2931. This may be a bug and not a feature
+			// NOTE: see https://trac.dojotoolkit.org/ticket/2931. This may be a bug and not a feature
 			_destroyContainer.innerHTML = "";
 		}catch(e){
 			/* squelch */
@@ -6475,7 +6475,7 @@ if(dojo.isIE || dojo.isOpera){
 	// Element attribute Functions
 	// =============================
 
-	// dojo.attr() should conform to http://www.w3.org/TR/DOM-Level-2-Core/
+	// dojo.attr() should conform to https://www.w3.org/TR/DOM-Level-2-Core/
 
 	var _propNames = {
 			// properties renamed to avoid clashes with reserved words
@@ -7487,10 +7487,10 @@ dojo.provide("dojo._base.NodeList");
 			}
 		},
 
-		// http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array#Methods
+		// https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array#Methods
 
 		// FIXME: handle return values for #3244
-		//		http://trac.dojotoolkit.org/ticket/3244
+		//		https://trac.dojotoolkit.org/ticket/3244
 
 		// FIXME:
 		//		need to wrap or implement:
@@ -7506,7 +7506,7 @@ dojo.provide("dojo._base.NodeList");
 			//		This method behaves exactly like the Array.slice method
 			//		with the caveat that it returns a dojo.NodeList and not a
 			//		raw Array. For more details, see Mozilla's (slice
-			//		documentation)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:slice]
+			//		documentation)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:slice]
 			// begin: Integer
 			//		Can be a positive or negative integer, with positive
 			//		integers noting the offset to begin at, and negative
@@ -7528,7 +7528,7 @@ dojo.provide("dojo._base.NodeList");
 			//		This method behaves exactly like the Array.splice method
 			//		with the caveat that it returns a dojo.NodeList and not a
 			//		raw Array. For more details, see Mozilla's (splice
-			//		documentation)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:splice]
+			//		documentation)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:splice]
 			// 		For backwards compatibility, calling .end() on the spliced NodeList
 			// 		does not return the original NodeList -- splice alters the NodeList in place.
 			// index: Integer
@@ -7559,7 +7559,7 @@ dojo.provide("dojo._base.NodeList");
 			//	description:
 			//		For more details on the behavior of indexOf, see Mozilla's
 			//		(indexOf
-			//		docs)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:indexOf]
+			//		docs)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:indexOf]
 			//	returns:
 			//		Positive Integer or 0 for a match, -1 of not found.
 			return d.indexOf(this, value, fromIndex); // Integer
@@ -7572,7 +7572,7 @@ dojo.provide("dojo._base.NodeList");
 			//	description:
 			//		For more details on the behavior of lastIndexOf, see
 			//		Mozilla's (lastIndexOf
-			//		docs)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:lastIndexOf]
+			//		docs)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:lastIndexOf]
 			// value: Object
 			//		The value to search for.
 			// fromIndex: Integer?
@@ -7585,7 +7585,7 @@ dojo.provide("dojo._base.NodeList");
 		every: function(callback, thisObject){
 			//	summary:
 			//		see `dojo.every()` and the (Array.every
-			//		docs)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every].
+			//		docs)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every].
 			//		Takes the same structure of arguments and returns as
 			//		dojo.every() with the caveat that the passed array is
 			//		implicitly this NodeList
@@ -7600,7 +7600,7 @@ dojo.provide("dojo._base.NodeList");
 			//		`dojo.some()` with the caveat that the passed array is
 			//		implicitly this NodeList.  See `dojo.some()` and Mozilla's
 			//		(Array.some
-			//		documentation)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:some].
+			//		documentation)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:some].
 			// callback: Function: the callback
 			// thisObject: Object?: the context
 			return d.some(this, callback, thisObject); // Boolean
@@ -7615,7 +7615,7 @@ dojo.provide("dojo._base.NodeList");
 			//		This method behaves exactly like the Array.concat method
 			//		with the caveat that it returns a `dojo.NodeList` and not a
 			//		raw Array. For more details, see the (Array.concat
-			//		docs)[http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:concat]
+			//		docs)[https://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:concat]
 			// item: Object?
 			//		Any number of optional parameters may be passed in to be
 			//		spliced into the NodeList
@@ -8078,7 +8078,7 @@ dojo.provide("dojo._base.NodeList");
 								//		addEventListener and can't be dug back
 								//		out to be triggered externally.
 								// see:
-								//		http://developer.mozilla.org/en/docs/DOM:element
+								//		https://developer.mozilla.org/en/docs/DOM:element
 
 								console.log(n, evt, _oe);
 
@@ -9251,7 +9251,7 @@ if(typeof dojo != "undefined"){
 		var useQSA = ( 
 			qsaAvail && (!forceDOM) &&
 			// as per CSS 3, we can't currently start w/ combinator:
-			//		http://www.w3.org/TR/css3-selectors/#w3cselgrammar
+			//		https://www.w3.org/TR/css3-selectors/#w3cselgrammar
 			(specials.indexOf(qcz) == -1) && 
 			// IE's QSA impl sucks on pseudos
 			(!d.isIE || (query.indexOf(":") == -1)) &&
@@ -9264,7 +9264,7 @@ if(typeof dojo != "undefined"){
 			//		Latest webkit (around 531.21.8) does not seem to do well with :checked on option
 			//		elements, even though according to spec, selected options should
 			//		match :checked. So go nonQSA for it:
-			//		http://bugs.dojotoolkit.org/ticket/5179
+			//		https://bugs.dojotoolkit.org/ticket/5179
 			(query.indexOf(":contains") == -1) && (query.indexOf(":checked") == -1) && 
 			(query.indexOf("|=") == -1) // some browsers don't grok it
 		);
@@ -9285,7 +9285,7 @@ if(typeof dojo != "undefined"){
 					// the QSA system contains an egregious spec bug which
 					// limits us, effectively, to only running QSA queries over
 					// entire documents.  See:
-					//		http://ejohn.org/blog/thoughts-on-queryselectorall/
+					//		https://johnresig.com/blog/thoughts-on-queryselectorall/
 					//	despite this, we can also handle QSA runs on simple
 					//	selectors, but we don't want detection to be expensive
 					//	so we're just checking for the presence of a space char
@@ -9491,7 +9491,7 @@ if(typeof dojo != "undefined"){
 		//
 		//	query:
 		//		The CSS3 expression to match against. For details on the syntax of
-		//		CSS3 selectors, see <http://www.w3.org/TR/css3-selectors/#selectors>
+		//		CSS3 selectors, see <https://www.w3.org/TR/css3-selectors/#selectors>
 		//	root:
 		//		A DOMNode (or node id) to scope the search from. Optional.
 		//	returns: dojo.NodeList
@@ -13328,7 +13328,7 @@ dojo.mixin(dijit, {
 			try{
 				dojo.withGlobal(openedForWindow || dojo.global, dijit.moveToBookmark, null, [bookmark]);
 			}catch(e2){
-				/*squelch IE internal error, see http://trac.dojotoolkit.org/ticket/1984 */
+				/*squelch IE internal error, see https://trac.dojotoolkit.org/ticket/1984 */
 			}
 		}
 	},
@@ -14750,7 +14750,7 @@ dijit.wai = {
 			var needsA11y = (cs.borderTopColor == cs.borderRightColor) || (bkImg != null && (bkImg == "none" || bkImg == "url(invalid-url:)" ));
 			dojo[needsA11y ? "addClass" : "removeClass"](dojo.body(), "dijit_a11y");
 			if(dojo.isIE){
-				div.outerHTML = "";		// prevent mixed-content warning, see http://support.microsoft.com/kb/925014
+				div.outerHTML = "";		// prevent mixed-content warning, see https://support.microsoft.com/kb/925014
 			}else{
 				dojo.body().removeChild(div);
 			}
@@ -14958,13 +14958,13 @@ dojo.declare("dijit._Widget", null, {
 
 	// lang: [const] String
 	//		Rarely used.  Overrides the default Dojo locale used to render this widget,
-	//		as defined by the [HTML LANG](http://www.w3.org/TR/html401/struct/dirlang.html#adef-lang) attribute.
+	//		as defined by the [HTML LANG](https://www.w3.org/TR/html401/struct/dirlang.html#adef-lang) attribute.
 	//		Value must be among the list of locales specified during by the Dojo bootstrap,
-	//		formatted according to [RFC 3066](http://www.ietf.org/rfc/rfc3066.txt) (like en-us).
+	//		formatted according to [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) (like en-us).
 	lang: "",
 
 	// dir: [const] String
-	//		Bi-directional support, as defined by the [HTML DIR](http://www.w3.org/TR/html401/struct/dirlang.html#adef-dir)
+	//		Bi-directional support, as defined by the [HTML DIR](https://www.w3.org/TR/html401/struct/dirlang.html#adef-dir)
 	//		attribute. Either left-to-right "ltr" or right-to-left "rtl".  If undefined, widgets renders in page's
 	//		default direction.
 	dir: "",
@@ -15260,7 +15260,7 @@ dojo.declare("dijit._Widget", null, {
 		//			  tree
 		// description:
 		//		Create calls a number of widget methods (postMixInProperties, buildRendering, postCreate,
-		//		etc.), some of which of you'll want to override. See http://docs.dojocampus.org/dijit/_Widget
+		//		etc.), some of which of you'll want to override. See https://docs.dojocampus.org/dijit/_Widget
 		//		for a discussion of the widget creation lifecycle.
 		//
 		//		Of course, adventurous developers could override create entirely, but this should
@@ -16251,8 +16251,8 @@ dojo.date.stamp.fromISOString = function(/*String*/formattedString, /*Number?*/d
 	//
 	//	description:
 	//		Accepts a string formatted according to a profile of ISO8601 as defined by
-	//		[RFC3339](http://www.ietf.org/rfc/rfc3339.txt), except that partial input is allowed.
-	//		Can also process dates as specified [by the W3C](http://www.w3.org/TR/NOTE-datetime)
+	//		[RFC3339](https://www.ietf.org/rfc/rfc3339.txt), except that partial input is allowed.
+	//		Can also process dates as specified [by the W3C](https://www.w3.org/TR/NOTE-datetime)
 	//		The following combinations are valid:
 	//
 	//			* dates only
@@ -16343,7 +16343,7 @@ dojo.date.stamp.toISOString = function(/*Date*/dateObject, /*dojo.date.stamp.__O
 	//		Format a Date object as a string according a subset of the ISO-8601 standard
 	//
 	//	description:
-	//		When options.selector is omitted, output follows [RFC3339](http://www.ietf.org/rfc/rfc3339.txt)
+	//		When options.selector is omitted, output follows [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
 	//		The local time zone is included as an offset from GMT, except when selector=='time' (time without a date)
 	//		Does not check bounds.  Only years between 100 and 9999 are supported.
 	//
@@ -17025,7 +17025,7 @@ dojo.declare("dijit._Templated",
 				// in case a user wishes to insert unescaped markup, e.g. ${!foo}
 				return key.charAt(0) == "!" ? value :
 					// Safer substitution, see heading "Attribute values" in
-					// http://www.w3.org/TR/REC-html40/appendix/notes.html#h-B.3.2
+					// https://www.w3.org/TR/REC-html40/appendix/notes.html#h-B.3.2
 					value.toString().replace(/"/g,"&quot;"); //TODO: add &amp? use encodeXML method?
 			}, this);
 		},
@@ -19029,7 +19029,7 @@ dojo.i18n.normalizeLocale = function(/*String?*/locale){
 	//		Returns canonical form of locale, as used by Dojo.
 	//
 	//  description:
-	//		All variants are case-insensitive and are separated by '-' as specified in [RFC 3066](http://www.ietf.org/rfc/rfc3066.txt).
+	//		All variants are case-insensitive and are separated by '-' as specified in [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt).
 	//		If no locale is specified, the dojo.locale is returned.  dojo.locale is defined by
 	//		the user agent's locale unless overridden by djConfig.
 
@@ -20717,7 +20717,7 @@ dojo.number.format = function(/*Number*/value, /*dojo.number.__FormatOptions?*/o
 	// description:
 	//		Create a string from a Number using a known localized pattern.
 	//		Formatting patterns appropriate to the locale are chosen from the
-	//		[Common Locale Data Repository](http://unicode.org/cldr) as well as the appropriate symbols and
+	//		[Common Locale Data Repository](https://unicode.org/cldr) as well as the appropriate symbols and
 	//		delimiters.
 	//		If value is Infinity, -Infinity, or is not a valid JavaScript number, return null.
 	// value:
@@ -21253,9 +21253,9 @@ dojo.provide("dojo.cldr.monetary");
 
 dojo.cldr.monetary.getData = function(/*String*/code){
 // summary: A mapping of currency code to currency-specific formatting information. Returns a unique object with properties: places, round.
-// code: an [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code
+// code: an [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code
 
-// from http://www.unicode.org/cldr/data/common/supplemental/supplementalData.xml:supplementalData/currencyData/fractions
+// from https://unicode.org/repos/cldr/trunk/common/supplemental/supplementalData.xml:supplementalData/currencyData/fractions
 
 	var placesData = {
 		ADP:0,AFN:0,ALL:0,AMD:0,BHD:3,BIF:0,BYR:0,CLF:0,CLP:0,
@@ -21328,9 +21328,9 @@ dojo.declare("dojo.currency.__FormatOptions", [dojo.number.__FormatOptions], {
 	//		Should not be set.  Value is assumed to be "currency".
 	//	symbol: String?
 	//		localized currency symbol. The default will be looked up in table of supported currencies in `dojo.cldr`
-	//		A [ISO4217](http://en.wikipedia.org/wiki/ISO_4217) currency code will be used if not found.
+	//		A [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) currency code will be used if not found.
 	//	currency: String?
-	//		an [ISO4217](http://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD".
+	//		an [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD".
 	//		For use with dojo.currency only.
 	//	places: Number?
 	//		number of decimal places to show.  Default is defined based on which currency is used.
@@ -21348,7 +21348,7 @@ dojo.currency.format = function(/*Number*/value, /*dojo.currency.__FormatOptions
 // description:
 //		Create a string from a Number using a known, localized pattern.
 //		[Formatting patterns](http://www.unicode.org/reports/tr35/#Number_Elements)
-//		appropriate to the locale are chosen from the [CLDR](http://unicode.org/cldr)
+//		appropriate to the locale are chosen from the [CLDR](https://unicode.org/cldr)
 //		as well as the appropriate symbols and delimiters and number of decimal places.
 //
 // value:
@@ -21373,11 +21373,11 @@ dojo.declare("dojo.currency.__ParseOptions", [dojo.number.__ParseOptions], {
 	//	type: String?
 	//		Should not be set.  Value is assumed to be currency.
 	//	currency: String?
-	//		an [ISO4217](http://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD".
+	//		an [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD".
 	//		For use with dojo.currency only.
 	//	symbol: String?
 	//		localized currency symbol. The default will be looked up in table of supported currencies in `dojo.cldr`
-	//		A [ISO4217](http://en.wikipedia.org/wiki/ISO_4217) currency code will be used if not found.
+	//		A [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) currency code will be used if not found.
 	//	places: Number?
 	//		fixed number of decimal places to accept.  The default is determined based on which currency is used.
 	//	fractional: Boolean?|Array?
@@ -21480,7 +21480,7 @@ dojo.declare("dijit.form._FormWidget", [dijit._Widget, dijit._Templated, dijit._
 		// Setup name=foo string to be referenced from the template (but only if a name has been specified)
 		// Unfortunately we can't use attributeMap to set the name due to IE limitations, see #8660
 		// Regarding escaping, see heading "Attribute values" in
-		// http://www.w3.org/TR/REC-html40/appendix/notes.html#h-B.3.2
+		// https://www.w3.org/TR/REC-html40/appendix/notes.html#h-B.3.2
 		this.nameAttrSetting = this.name ? ('name="' + this.name.replace(/'/g, "&quot;") + '"') : '';
 		this.inherited(arguments);
 	},
@@ -23322,7 +23322,7 @@ dojo.declare(
 		//			but erased during editing, so that the user can just enter a plain number.
 
 		// currency: [const] String
-		//		the [ISO4217](http://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD"
+		//		the [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) currency code, a three letter sequence like "USD"
 		currency: "",
 
 		// constraints: dijit.form.CurrencyTextBox.__Constraints
@@ -23381,7 +23381,7 @@ dojo.cldr.supplemental.getFirstDayOfWeek = function(/*String?*/locale){
 //		Returns a zero-based index for first day of the week, as used by the local (Gregorian) calendar.
 //		e.g. Sunday (returns 0), or Monday (returns 1)
 
-	// from http://www.unicode.org/cldr/data/common/supplemental/supplementalData.xml:supplementalData/weekData/firstDay
+	// from https://unicode.org/repos/cldr/trunk/common/supplemental/supplementalData.xml:supplementalData/weekData/firstDay
 	var firstDay = {/*default is 1=Monday*/
 		mv:5,
 		af:6,bh:6,dj:6,dz:6,eg:6,er:6,et:6,iq:6,ir:6,jo:6,ke:6,kw:6,
@@ -23409,7 +23409,7 @@ dojo.cldr.supplemental._region = function(/*String?*/locale){
 			ja:"jp", ko:"kr", nl:"nl", pt:"br", sv:"se", zh:"cn"}[tags[0]];
 	}else if(region.length == 4){
 		// The ISO 3166 country code is usually in the second position, unless a
-		// 4-letter script is given. See http://www.ietf.org/rfc/rfc4646.txt
+		// 4-letter script is given. See https://www.ietf.org/rfc/rfc4646.txt
 		region = tags[2];
 	}
 	return region;
@@ -23422,7 +23422,7 @@ dojo.cldr.supplemental.getWeekend = function(/*String?*/locale){
 //		or by default in the user's locale.
 //		e.g. {start:6, end:0}
 
-	// from http://www.unicode.org/cldr/data/common/supplemental/supplementalData.xml:supplementalData/weekData/weekend{Start,End}
+	// from https://unicode.org/repos/cldr/trunk/common/supplemental/supplementalData.xml:supplementalData/weekData/weekend{Start,End}
 	var weekendStart = {/*default is 6=Saturday*/
 		'in':0,
 		af:4,dz:4,ir:4,om:4,sa:4,ye:4,

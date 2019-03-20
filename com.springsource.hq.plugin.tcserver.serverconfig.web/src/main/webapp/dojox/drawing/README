@@ -22,13 +22,13 @@ dojo.gfx
 -------------------------------------------------------------------------------
 Documentation
 
-http://docs.dojocampus.org/dojox/drawing
+https://docs.dojocampus.org/dojox/drawing
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/dojo/dojox/trunk/drawing.js
-http://svn.dojotoolkit.org/dojo/dojox/trunk/drawing/*
+https://svn.dojotoolkit.org/dojo/dojox/trunk/drawing.js
+https://svn.dojotoolkit.org/dojo/dojox/trunk/drawing/*
 
 Install into the following directory structure:
 /dojox/drawing/

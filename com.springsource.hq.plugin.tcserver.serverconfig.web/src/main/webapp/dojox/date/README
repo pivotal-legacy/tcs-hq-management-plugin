@@ -36,7 +36,7 @@ See the API documentation for details.
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/date/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/date/*
 
 Install into the following directory structure:
 /dojox/date/

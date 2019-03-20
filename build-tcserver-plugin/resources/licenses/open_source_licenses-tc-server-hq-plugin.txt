@@ -221,7 +221,7 @@ the following acknowledgement:
 
 "This product includes software developed by the Indiana
 University Extreme! Lab.  For further information please visit
-http://www.extreme.indiana.edu/"
+https://www.extreme.indiana.edu/"
 
 Alternatively, this acknowledgment may appear in the software
 itself, and wherever such third-party acknowledgments normally
@@ -231,7 +231,7 @@ appear.
 Extreme! Lab" shall not be used to endorse or promote
 products derived from this software without prior written
 permission from Indiana University.  For written permission,
-please contact http://www.extreme.indiana.edu/.
+please contact https://www.extreme.indiana.edu/.
 
 5) Products derived from this software may not use "Indiana
 University" name nor may "Indiana University" appear in their name,
@@ -517,7 +517,7 @@ limitations under the License.
    must include the following acknowledgement:
 
      "This product includes software developed by Spring Security
-      Project (http://www.springframework.org/security)."
+      Project (https://www.springframework.org/security)."
 
    Alternately, this acknowledgement may appear in the software itself,
    if and wherever such third-party acknowledgements normally appear.
@@ -1228,7 +1228,7 @@ available (as would be noted above), you may obtain a copy of
 the source code corresponding to the binaries for such open
 source components and modifications thereto, if any, (the
 "Source Files"), by downloading the Source Files from Pivotal's website at
-http://www.gopivotal.com/open-source, or by sending a request, 
+https://pivotal.io/open-source, or by sending a request, 
 with your name and address to: Pivotal Software, Inc., 3496 Deer Creek Rd, 
 Palo Alto, CA 94304, Attention: General Counsel. All such requests should 
 clearly specify: OPEN SOURCE FILES REQUEST, Attention General Counsel. 

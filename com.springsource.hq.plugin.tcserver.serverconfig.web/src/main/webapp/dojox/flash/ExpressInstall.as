@@ -71,7 +71,7 @@ class ExpressInstall{
 
 		var cacheBuster:Number = Math.random();
 
-		this.hold.loadMovie("http://fpdownload.macromedia.com/pub/flashplayer/"
+		this.hold.loadMovie("https://fpdownload.macromedia.com/pub/flashplayer/"
 												+"update/current/swf/autoUpdater.swf?"+ cacheBuster);
 	}
 

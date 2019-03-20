@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -11,7 +11,7 @@ dojo.provide("dojox.atom.io.model");
 dojo.require("dojox.xml.parser");
 dojo.require("dojo.string");
 dojo.require("dojo.date.stamp");
-dojox.atom.io.model._Constants={"ATOM_URI":"http://www.w3.org/2005/Atom","ATOM_NS":"http://www.w3.org/2005/Atom","PURL_NS":"http://purl.org/atom/app#","APP_NS":"http://www.w3.org/2007/app"};
+dojox.atom.io.model._Constants={"ATOM_URI":"http://www.w3.org/2005/Atom","ATOM_NS":"http://www.w3.org/2005/Atom","PURL_NS":"https://purl.org/atom/app#","APP_NS":"https://www.w3.org/2007/app"};
 dojox.atom.io.model._actions={"link":function(_1,_2){
 if(_1.links===null){
 _1.links=[];

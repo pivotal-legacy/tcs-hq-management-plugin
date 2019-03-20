@@ -46,17 +46,17 @@ Documentation
 For now:
 
 dojox.lang.functional:
-http://lazutkin.com/blog/2008/jan/12/functional-fun-javascript-dojo/
-http://lazutkin.com/blog/2008/jun/30/using-recursion-combinators-javascript/
+https://www.lazutkin.com/blog/2008/jan/12/functional-fun-javascript-dojo/
+https://www.lazutkin.com/blog/2008/jun/30/using-recursion-combinators-javascript/
 
 dojox.lang.aspect:
-http://lazutkin.com/blog/2008/may/18/aop-aspect-javascript-dojo/
+https://www.lazutkin.com/blog/2008/may/18/aop-aspect-javascript-dojo/
 
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/src/dojo/dojox/trunk/lang/*
+https://svn.dojotoolkit.org/src/dojo/dojox/trunk/lang/*
 
 Install into the following directory structure:
 /dojox/lang/

@@ -1,12 +1,12 @@
 {
 	"SMDVersion": "2.0",
-	"id": "http://en.wikipedia.org/w/api.php",
+	"id": "https://en.wikipedia.org/w/api.php",
 	"description": "Wikipedia API",
 
 	transport: "JSONP",
 	envelope: "URL",
 	additionalParameters: true,
-	target: "http://en.wikipedia.org/w/api.php",
+	target: "https://en.wikipedia.org/w/api.php",
 	parameters: [
 		{ name: "format", optional: false, "default": "json" }
 	],
@@ -15,7 +15,7 @@
 
 		/*
 		 * This is a very very basic spec that just gives us a free-form API
-		 * endpoint to talk to. See http://en.wikipedia.org/w/api.php for
+		 * endpoint to talk to. See https://en.wikipedia.org/w/api.php for
 		 * details on what parameters to supply and what sort of data you
 		 * should expect to see. Note that returned JSON is often somewhat
 		 * ... interesting ...:

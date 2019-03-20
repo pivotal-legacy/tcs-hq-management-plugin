@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 /*
 	This is an optimized version of Dojo, built for deployment and not for
 	development. To get sources and documentation, please visit:
 
-		http://dojotoolkit.org
+		https://dojotoolkit.org
 */
 
 if(!dojo._hasResource["dijit.dijit"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
@@ -3147,7 +3147,7 @@ dojo.provide("dojox.grid._Builder");
 				var leftTop = this.dragRecord.leftTop;
 				var changeX = dojo._isBodyLtr() ? leftTop.l : -leftTop.l;
 				// Make sure we are not under our minimum
-				// http://bugs.dojotoolkit.org/ticket/9390
+				// https://bugs.dojotoolkit.org/ticket/9390
 				changeX += Math.max(inDrag.w + changeX, this.minColWidth) - (inDrag.w + changeX);
 				if(dojo.isWebKit && inDrag.spanners.length){
 					// Webkit needs the pad border extents back in
@@ -9678,7 +9678,7 @@ dojo.declare("dojox.grid.DataGrid", dojox.grid._Grid, {
 			// and migrate from page to page. If some page is not 
 			// loaded yet empty rows can migrate to initialized pages
 			// without refreshing. It causes empty rows in some pages, see:
-			// http://bugs.dojotoolkit.org/ticket/6818
+			// https://bugs.dojotoolkit.org/ticket/6818
 			// this code fix this problem by reseting loaded page info
 			this._pages = [];
 			this._bop = -1;

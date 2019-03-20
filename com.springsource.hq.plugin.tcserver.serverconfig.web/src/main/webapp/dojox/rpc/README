@@ -37,13 +37,13 @@ Dojo Core (package loader, dojo.rpc).
 -------------------------------------------------------------------------------
 Documentation
 
-See RPC documentation at http://dojotoolkit.org/
+See RPC documentation at https://dojotoolkit.org/
 
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/rpc/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/rpc/*
 
 Install into the following directory structure:
 /dojox/rpc/

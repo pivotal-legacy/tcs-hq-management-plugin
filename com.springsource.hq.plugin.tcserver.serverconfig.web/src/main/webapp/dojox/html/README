@@ -40,9 +40,9 @@ to your djConfig.
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html/*
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html/styles.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/html/styles.js
 Install into the following directory structure:
 /dojox/html/
 

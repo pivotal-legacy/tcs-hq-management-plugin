@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -12,7 +12,7 @@ dojo.require("dojox.image.Badge");
 dojo.require("dojox.data.FlickrRestStore");
 dojo.declare("dojox.image.FlickrBadge",dojox.image.Badge,{children:"a.flickrImage",userid:"",username:"",setid:"",tags:"",searchText:"",target:"",apikey:"8c6803164dbc395fb7131c9d54843627",_store:null,postCreate:function(){
 if(this.username&&!this.userid){
-var _1=dojo.io.script.get({url:"http://www.flickr.com/services/rest/",preventCache:true,content:{format:"json",method:"flickr.people.findByUsername",api_key:this.apikey,username:this.username},callbackParamName:"jsoncallback"});
+var _1=dojo.io.script.get({url:"https://www.flickr.com/services/rest/",preventCache:true,content:{format:"json",method:"flickr.people.findByUsername",api_key:this.apikey,username:this.username},callbackParamName:"jsoncallback"});
 _1.addCallback(this,function(_2){
 if(_2.user&&_2.user.nsid){
 this.userid=_2.user.nsid;

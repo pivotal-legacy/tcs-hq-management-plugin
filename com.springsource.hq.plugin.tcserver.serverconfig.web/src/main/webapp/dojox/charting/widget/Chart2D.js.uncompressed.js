@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 /*
 	This is an optimized version of Dojo, built for deployment and not for
 	development. To get sources and documentation, please visit:
 
-		http://dojotoolkit.org
+		https://dojotoolkit.org
 */
 
 if(!dojo._hasResource["dojox.gfx.matrix"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
@@ -758,7 +758,7 @@ dojo.mixin(dojox.gfx, {
 		// description:
 		//		Converts a CSS font string to a gfx font object. The CSS font
 		//		string components should follow the W3C specified order
-		//		(see http://www.w3.org/TR/CSS2/fonts.html#font-shorthand):
+		//		(see https://www.w3.org/TR/CSS2/fonts.html#font-shorthand):
 		//		style, variant, weight, size, optional line height (will be
 		//		ignored), and family.
 		// str: String
@@ -950,7 +950,7 @@ dojo.provide("dojox.lang.functional.lambda");
 
 // Acknoledgements:
 //	- lambda() is based on work by Oliver Steele 
-//		(http://osteele.com/sources/javascript/functional/functional.js)
+//		(https://osteele.com/sources/javascript/functional/functional.js)
 //		which was published under MIT License
 
 // Notes:
@@ -1985,7 +1985,7 @@ dojo.provide("dojox.color.Palette");
 	*	dojox.color.Palette
 	*
 	*	The Palette object is loosely based on the color palettes
-	*	at Kuler (http://kuler.adobe.com).  They are 5 color palettes
+	*	at Kuler (https://kuler.adobe.com).  They are 5 color palettes
 	*	with the base color considered to be the third color in the
 	*	palette (for generation purposes).
 	*
@@ -2011,7 +2011,7 @@ dojo.provide("dojox.color.Palette");
 		//		A palette is useful for the ability to transform all the colors in it
 		//		using a simple object-based approach.  In addition, you can generate
 		//		palettes using dojox.color.Palette.generate; these generated palettes
-		//		are based on the palette generators at http://kuler.adobe.com.
+		//		are based on the palette generators at https://kuler.adobe.com.
 		//
 		//	colors: dojox.color.Color[]
 		//		The actual color references in this palette.
@@ -2239,7 +2239,7 @@ dojox.color.Palette.__generatorArgs = function(base){
 dojox.color.Palette.__analogousArgs = function(base, high, low){
 	//	summary:
 	//		The keyword arguments object that is used to create a 5 color palette based on the
-	//		analogous rules as implemented at http://kuler.adobe.com, using the HSV color model.
+	//		analogous rules as implemented at https://kuler.adobe.com, using the HSV color model.
 	//
 	//	base: dojo.Color
 	//		The base color to be used to generate the palette.
@@ -2254,7 +2254,7 @@ dojox.color.Palette.__analogousArgs = function(base, high, low){
 dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 	//	summary:
 	//		The keyword arguments object used to create a palette based on the split complementary rules
-	//		as implemented at http://kuler.adobe.com.
+	//		as implemented at https://kuler.adobe.com.
 	//
 	//	base: dojo.Color
 	//		The base color to be used to generate the palette.
@@ -2270,7 +2270,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			analogous:function(/* dojox.color.Palette.__analogousArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the analogous rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var high=args.high||60, 	//	delta between base hue and highest hue (subtracted from base)
 					low=args.low||18,		//	delta between base hue and lowest hue (added to base)
 					base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
@@ -2300,7 +2300,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			monochromatic: function(/* dojox.color.Palette.__generatorArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the monochromatic rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					hsv = base.toHsv();
 				
@@ -2323,7 +2323,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			triadic: function(/* dojox.color.Palette.__generatorArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the triadic rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					hsv = base.toHsv();
 
@@ -2348,7 +2348,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			complementary: function(/* dojox.color.Palette.__generatorArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the complementary rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					hsv = base.toHsv();
 
@@ -2371,7 +2371,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			splitComplementary: function(/* dojox.color.Palette.__splitComplementaryArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the split complementary rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					dangle = args.da || 30,
 					hsv = base.toHsv();
@@ -2397,7 +2397,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			compound: function(/* dojox.color.Palette.__generatorArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the compound rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					hsv = base.toHsv();
 
@@ -2423,7 +2423,7 @@ dojox.color.Palette.__splitComplementaryArgs = function(base, da){
 			shades: function(/* dojox.color.Palette.__generatorArgs */args){
 				//	summary:
 				//		Create a 5 color palette based on the shades rules as implemented at
-				//		http://kuler.adobe.com.
+				//		https://kuler.adobe.com.
 				var base = dojo.isString(args.base)?new dojox.color.Color(args.base):args.base,
 					hsv = base.toHsv();
 
@@ -5191,7 +5191,7 @@ dojo.provide("dojox.charting.plot2d.common");
 					var dx=item.x-arr[i-1].x, dy=arr[i-1].y;
 					return "C"+(item.x-(tension-1)*(dx/tension))+","+dy+" "+(item.x-(dx/tension))+","+item.y+" "+item.x+","+item.y;
 				} else if(tension == "X" || tension == "x" || tension == "S") {
-					// use Excel "line smoothing" algorithm (http://xlrotor.com/resources/files.shtml)
+					// use Excel "line smoothing" algorithm (https://xlrotor.com/resources/files.shtml)
 					var p0, p1 = arr[i-1], p2 = arr[i], p3;
 					var bz1x, bz1y, bz2x, bz2y;
 					var f = 1/6;

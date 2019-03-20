@@ -15,7 +15,7 @@
   ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   -->
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <title> tc Server Services Reference</title>
@@ -56,7 +56,7 @@ div.rbtoc1277143928380 li {margin-left: 0px;padding-left: 0px;}
 
 <p>A tc Runtime service represents the combination of one or more Connector components that share a single Engine component for processing incoming requests. A tc Runtime consists of one or more services. The default tc Runtime service which is always present in newly created tc Runtime instance is called "catalina."</p>
 
-<p>See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/service.html">The Service Component</a> on the Apache Web site for more information.</p>
+<p>See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/service.html">The Service Component</a> on the Apache Web site for more information.</p>
 
 <h2><a name="ui-tcserver.ServerServicesRef-GeneralServiceProperties"></a>General Service Properties</h2>
 
@@ -78,8 +78,8 @@ div.rbtoc1277143928380 li {margin-left: 0px;padding-left: 0px;}
 
 <p>Each tc Runtime service can have one or more connectors configured. Connectors are specific to a protocol, such as HTTP or AJP. See the following documentation on the Apache Web site for additional detailed information:</p>
 <ul>
-	<li><a href="http://tomcat.apache.org/tomcat-6.0-doc/config/http.html">The HTTP Connector </a></li>
-	<li><a href="http://tomcat.apache.org/tomcat-6.0-doc/config/ajp.html">The AJP Connector </a></li>
+	<li><a href="https://tomcat.apache.org/tomcat-6.0-doc/config/http.html">The HTTP Connector </a></li>
+	<li><a href="https://tomcat.apache.org/tomcat-6.0-doc/config/ajp.html">The AJP Connector </a></li>
 </ul>
 
 
@@ -119,11 +119,11 @@ div.rbtoc1277143928380 li {margin-left: 0px;padding-left: 0px;}
 </tr>
 <tr>
 <td class='confluenceTd'> Proxy Host <a name="ui-tcserver.ServerServicesRef-servicesconnectorproxyName"></a></td>
-<td class='confluenceTd'> If this connector is being used in a proxy configuration, specifies the server name that is returned from calls to <tt>request.getServerName()</tt>. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/proxy-howto.html">Proxy Support HOW-TOP</a> for more information. </td>
+<td class='confluenceTd'> If this connector is being used in a proxy configuration, specifies the server name that is returned from calls to <tt>request.getServerName()</tt>. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/proxy-howto.html">Proxy Support HOW-TOP</a> for more information. </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Proxy Port <a name="ui-tcserver.ServerServicesRef-servicesconnectorproxyPort"></a><br class="atl-forced-newline" /> </td>
-<td class='confluenceTd'> If this connector is being used in a proxy configuration, specifies the server port that is returned from calls to <tt>request.getServerPort()</tt>. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/proxy-howto.html">Proxy Support HOW-TOP</a> for more information. <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> If this connector is being used in a proxy configuration, specifies the server port that is returned from calls to <tt>request.getServerPort()</tt>. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/proxy-howto.html">Proxy Support HOW-TOP</a> for more information. <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Redirect Port <a name="ui-tcserver.ServerServicesRef-servicesconnectorredirectPort"></a><br class="atl-forced-newline" /> </td>
@@ -167,7 +167,7 @@ div.rbtoc1277143928380 li {margin-left: 0px;padding-left: 0px;}
 </tr>
 <tr>
 <td class='confluenceTd'> Enable SSL <a name="ui-tcserver.ServerServicesRef-servicesconnectorSSLEnabled"></a> <br class="atl-forced-newline" /> </td>
-<td class='confluenceTd'> Enables SSL traffic (handshake/encryption/decription) for this connector. When enabled, be sure to also set the "scheme" and "secure" attributes so that correct values are returned to user calls to <tt>request.getScheme()</tt> and <tt>request.isSecure()</tt>. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/http.html#SSL%20Support">SSL Support</a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> Enables SSL traffic (handshake/encryption/decription) for this connector. When enabled, be sure to also set the "scheme" and "secure" attributes so that correct values are returned to user calls to <tt>request.getScheme()</tt> and <tt>request.isSecure()</tt>. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/http.html#SSL%20Support">SSL Support</a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Certificate Encoding Algorithm <a name="ui-tcserver.ServerServicesRef-servicesconnectoralgorithm"></a><br class="atl-forced-newline" /> </td>
@@ -275,23 +275,23 @@ To view this information after you have enabled thread diagnostics, go to the <b
 </tr>
 <tr>
 <td class='confluenceTd'> Name  <a name="ui-tcserver.ServerServicesRef-serviceshostname"></a><br class="atl-forced-newline" /> </td>
-<td class='confluenceTd'> Specifies the network name of this virtual host, as registered in your Domain Name Service (DNS) server. One of the Hosts associated within a tc Runtime engine MUST have a name that matches the "Default Host" setting for that engine. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Host%20Name%20Aliases">Host Name Aliases</a> for information on how to assign more than one network name to the same virtual host. </td>
+<td class='confluenceTd'> Specifies the network name of this virtual host, as registered in your Domain Name Service (DNS) server. One of the Hosts associated within a tc Runtime engine MUST have a name that matches the "Default Host" setting for that engine. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Host%20Name%20Aliases">Host Name Aliases</a> for information on how to assign more than one network name to the same virtual host. </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Application Base Directory  <a name="ui-tcserver.ServerServicesRef-serviceshostappBase"></a></td>
-<td class='confluenceTd'> Specifies the application base directory for this virtual host. The application base directory may contain Web applications to be deployed on this virtual host. You can specify an absolute pathname for this directory, or a pathname that is relative to the <tt>$CATALINA_BASE</tt> directory. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information on automatic recognition and deployment of Web applications. <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> Specifies the application base directory for this virtual host. The application base directory may contain Web applications to be deployed on this virtual host. You can specify an absolute pathname for this directory, or a pathname that is relative to the <tt>$CATALINA_BASE</tt> directory. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information on automatic recognition and deployment of Web applications. <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Auto Deploy Web Applications <a name="ui-tcserver.ServerServicesRef-serviceshostautoDeploy"></a><br class="atl-forced-newline" /> </td>
-<td class='confluenceTd'> Specifies whether new Web applications that are copied to the application base directory while tc Runtime is running should be automatically deployed. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> Specifies whether new Web applications that are copied to the application base directory while tc Runtime is running should be automatically deployed. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Deploy Applications on Startup  <a name="ui-tcserver.ServerServicesRef-serviceshostdeployOnStartup"></a><br class="atl-forced-newline" /> </td>
-<td class='confluenceTd'> Specifies whether Web applications from this host should be automatically deployed when the tc Runtime instance starts up. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information. <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> Specifies whether Web applications from this host should be automatically deployed when the tc Runtime instance starts up. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment</a> for more information. <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Unpack WARs <a name="ui-tcserver.ServerServicesRef-serviceshostunpackWARs"></a></td>
-<td class='confluenceTd'> Specifies whether tc Runtime should unpack Web applications that are copied to the application base directory as Web application archive (WAR) files into a corresponding disk directory structure. If unchecked, tc Runtime runs the Web applications directory from a WAR file. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment <a name="ui-tcserver.ServerServicesRef-serviceshostdeployXML"></a></a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> Specifies whether tc Runtime should unpack Web applications that are copied to the application base directory as Web application archive (WAR) files into a corresponding disk directory structure. If unchecked, tc Runtime runs the Web applications directory from a WAR file. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/host.html#Automatic%20Application%20Deployment">Automatic Application Deployment <a name="ui-tcserver.ServerServicesRef-serviceshostdeployXML"></a></a> for more information.&nbsp; <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> Deploy XML <br class="atl-forced-newline" />  <a name="ui-tcserver.ServerServicesRef-serviceshostworkDir"></a></td>
@@ -324,7 +324,7 @@ To view this information after you have enabled thread diagnostics, go to the <b
 </tr>
 <tr>
 <td class='confluenceTd'> Pattern <br class="atl-forced-newline" />  <a name="ui-tcserver.ServerServicesRef-servicesloggingpattern"></a></td>
-<td class='confluenceTd'> A formatting layout identifying the various information fields from the request and response to be logged, or the word "common" or "combined" to select a standard format. See <a href="http://tomcat.apache.org/tomcat-6.0-doc/config/valve.html">the Apache Web site</a> for more information on configuring this attribute. Note that the optimized access does only support "common" and "combined" as the value for this attribute. <br class="atl-forced-newline" /> </td>
+<td class='confluenceTd'> A formatting layout identifying the various information fields from the request and response to be logged, or the word "common" or "combined" to select a standard format. See <a href="https://tomcat.apache.org/tomcat-6.0-doc/config/valve.html">the Apache Web site</a> for more information on configuring this attribute. Note that the optimized access does only support "common" and "combined" as the value for this attribute. <br class="atl-forced-newline" /> </td>
 </tr>
 <tr>
 <td class='confluenceTd'> File Name Prefix  <a name="ui-tcserver.ServerServicesRef-servicesloggingprefix"></a><br class="atl-forced-newline" /> </td>

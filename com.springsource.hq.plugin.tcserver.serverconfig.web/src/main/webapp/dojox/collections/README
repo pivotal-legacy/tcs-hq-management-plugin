@@ -24,13 +24,13 @@ DojoX Collections has no dependencies, outside of Dojo Core.
 -------------------------------------------------------------------------------
 Documentation
 
-See the API documentation for Dojo (http://dojotoolkit.org/api).
+See the API documentation for Dojo (https://dojotoolkit.org/api).
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/collections.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/collections/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/collections.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/collections/*
 
 Install into the following directory structure:
 /dojox/collections/

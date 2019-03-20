@@ -36,7 +36,7 @@ import com.springsource.hq.plugin.tcserver.serverconfig.ValidationUtils;
 import com.springsource.hq.plugin.tcserver.serverconfig.services.Service;
 
 /**
- * Settings for service engine. (http://tomcat.apache.org/tomcat-6.0-doc/config/engine.html)
+ * Settings for service engine. (https://tomcat.apache.org/tomcat-6.0-doc/config/engine.html)
  * 
  * @since 2.0
  */

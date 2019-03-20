@@ -14,7 +14,7 @@ Project description
 DojoX UUID is the port of the original Dojo 0.4.x UUID classes.  The UUID 
 classes can be used to represent Universally Unique IDentifiers (UUIDs), as
 described in the IETF's RFC 4122: 
-  http://tools.ietf.org/html/rfc4122
+  https://tools.ietf.org/html/rfc4122
 
 The DojoX UUID classes provide support for generating both "time-based" UUIDs
 and lightweight "random" UUIDs.  DojoX UUID does not yet have support for 
@@ -28,13 +28,13 @@ DojoX UUID has no dependencies, outside of Dojo Core.
 -------------------------------------------------------------------------------
 Documentation
 
-See the API documentation for Dojo (http://dojotoolkit.org/api).
+See the API documentation for Dojo (https://dojotoolkit.org/api).
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid.js
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid.js
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/uuid/*
 
 Install into the following directory structure:
 /dojox/uuid/

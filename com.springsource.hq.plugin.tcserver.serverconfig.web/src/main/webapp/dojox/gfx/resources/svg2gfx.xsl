@@ -44,10 +44,10 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:math="http://exslt.org/math"
+	xmlns:math="http://exslt.org/math/"
 	xmlns:exsl="http://exslt.org/common"
-	xmlns:saxon="http://icl.com/saxon"
-	xmlns:xalan="http://xml.apache.org/Xalan"
+	xmlns:saxon="https://icl.com/saxon"
+	xmlns:xalan="https://xml.apache.org/Xalan"
 	extension-element-prefixes="math exsl saxon xalan">
 	<xsl:output method="text" version="1.0" encoding="UTF-8"/>
 	<xsl:strip-space elements="*"/>

@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -17,7 +17,7 @@ if(isNaN(_1)){
 _1=1;
 }
 }
-var _2="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+var _2="https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 var _3=document.createElementNS(_2,"window");
 var _4=document.createElementNS(_2,"description");
 _4.setAttribute("crop","end");

@@ -25,8 +25,8 @@ framework.
 -------------------------------------------------------------------------------
 Documentation:
 
-See the Dojo API tool (http://dojotoolkit.org/api)
-as well as dojocampus (http://docs.dojocampus.org/dojox/atom)
+See the Dojo API tool (https://dojotoolkit.org/api)
+as well as dojocampus (https://docs.dojocampus.org/dojox/atom)
 -------------------------------------------------------------------------------
 Contributions:
 
@@ -36,7 +36,7 @@ Constributions of documentation, examples, and fixes are always welcome.
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/src/dojo/dojox/trunk/atom/*
+https://svn.dojotoolkit.org/src/dojo/dojox/trunk/atom/*
 
 Install into the following directory structure:
 /dojox/atom/

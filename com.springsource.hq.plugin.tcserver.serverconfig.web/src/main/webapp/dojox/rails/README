@@ -22,13 +22,13 @@ Dependencies:
 -------------------------------------------------------------------------------
 Documentation
         Documentatation will reside at:
-        http://docs.dojocampus.org/dojox/rails
+        https://docs.dojocampus.org/dojox/rails
 
 -------------------------------------------------------------------------------
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/src/dojox/trunk/rails.js
+https://svn.dojotoolkit.org/src/dojox/trunk/rails.js
 
 Install into the following directory structure:
 /dojox/rails.js

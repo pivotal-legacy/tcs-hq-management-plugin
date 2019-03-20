@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 /*
 	This is an optimized version of Dojo, built for deployment and not for
 	development. To get sources and documentation, please visit:
 
-		http://dojotoolkit.org
+		https://dojotoolkit.org
 */
 
 if(!dojo._hasResource["dojo.colors"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
@@ -5073,7 +5073,7 @@ dojo.declare("dijit._editor.plugins.EnterKeyHandling", dijit._editor._Plugin, {
 	//		Thus, attr('value') on safari/FF returns the browser-specific HTML listed above,
 	//		rather than the semantically meaningful value that IE returns: <p>one<br>two</p> <p>three<br>four</p>.
 	//
-	//		(Note: originally based on http://bugs.dojotoolkit.org/ticket/2859)
+	//		(Note: originally based on https://bugs.dojotoolkit.org/ticket/2859)
 	//
 	//		blockNodeForEnter=P
 	//		-------------------
@@ -7063,9 +7063,9 @@ dojo.declare(
 			// calculate that on our own every time
 
 			// TODO: want to redo this, see
-			//		http://trac.dojotoolkit.org/ticket/3272
+			//		https://trac.dojotoolkit.org/ticket/3272
 			//	and
-			//		http://trac.dojotoolkit.org/ticket/4108
+			//		https://trac.dojotoolkit.org/ticket/4108
 
 
 			// natural size of the list has changed, so erase old
@@ -9517,7 +9517,7 @@ dojo.declare("dijit._editor.plugins.FontChoice", dijit._editor._Plugin,{
 	//	|	plugins="[{name:'dijit._editor.plugins.FontChoice', command:'fontName', custom:['Verdana','Myriad','Garamond']},...]"
 	//
 	//		Alternatively, for `fontName` only, `generic:true` may be specified to provide a dropdown with
-	//		[CSS generic font families](http://www.w3.org/TR/REC-CSS2/fonts.html#generic-font-families)
+	//		[CSS generic font families](https://www.w3.org/TR/REC-CSS2/fonts.html#generic-font-families)
 	//
 	//		Note that the editor is often unable to properly handle font styling information defined outside
 	//		the context of the current editor instance, such as pre-populated HTML.

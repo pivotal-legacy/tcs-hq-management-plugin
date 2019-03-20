@@ -1,7 +1,7 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
@@ -24,7 +24,7 @@ this._handlers={};
 this._prevRequestRanges=[];
 this._maxPhotosPerUser={};
 this._id=dojox.data.FlickrRestStore.prototype._id++;
-},_id:0,_requestCount:0,_flickrRestUrl:"http://www.flickr.com/services/rest/",_apikey:null,_storeRef:"_S",_cache:null,_prevRequests:null,_handlers:null,_sortAttributes:{"date-posted":true,"date-taken":true,"interestingness":true},_fetchItems:function(_2,_3,_4){
+},_id:0,_requestCount:0,_flickrRestUrl:"https://www.flickr.com/services/rest/",_apikey:null,_storeRef:"_S",_cache:null,_prevRequests:null,_handlers:null,_sortAttributes:{"date-posted":true,"date-taken":true,"interestingness":true},_fetchItems:function(_2,_3,_4){
 var _5={};
 if(!_2.query){
 _2.query=_5={};
@@ -258,7 +258,7 @@ return undefined;
 if(_24.items){
 return dojox.data.FlickrStore.prototype._processFlickrData.apply(this,arguments);
 }
-var _27=["http://farm",null,".static.flickr.com/",null,"/",null,"_",null];
+var _27=["https://farm",null,".static.flickr.com/",null,"/",null,"_",null];
 var _28=[];
 var _29=(_24.photoset?_24.photoset:_24.photos);
 if(_24.stat=="ok"&&_29&&_29.photo){

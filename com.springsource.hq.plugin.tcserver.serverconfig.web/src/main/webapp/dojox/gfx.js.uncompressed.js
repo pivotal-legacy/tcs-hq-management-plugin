@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 /*
 	This is an optimized version of Dojo, built for deployment and not for
 	development. To get sources and documentation, please visit:
 
-		http://dojotoolkit.org
+		https://dojotoolkit.org
 */
 
 if(!dojo._hasResource["dojox.gfx.matrix"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
@@ -758,7 +758,7 @@ dojo.mixin(dojox.gfx, {
 		// description:
 		//		Converts a CSS font string to a gfx font object. The CSS font
 		//		string components should follow the W3C specified order
-		//		(see http://www.w3.org/TR/CSS2/fonts.html#font-shorthand):
+		//		(see https://www.w3.org/TR/CSS2/fonts.html#font-shorthand):
 		//		style, variant, weight, size, optional line height (will be
 		//		ignored), and family.
 		// str: String

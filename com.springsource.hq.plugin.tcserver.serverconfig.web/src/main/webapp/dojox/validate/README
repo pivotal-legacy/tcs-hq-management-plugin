@@ -53,8 +53,8 @@ Installation instructions
 
 Grab the following from the Dojo SVN Repository:
 
-http://svn.dojotoolkit.org/src/dojox/trunk/validate.js
-http://svn.dojotoolkit.org/src/dojox/trunk/validate
+https://svn.dojotoolkit.org/src/dojox/trunk/validate.js
+https://svn.dojotoolkit.org/src/dojox/trunk/validate
 
 Install into the following directory structure:
 /dojox/validate/

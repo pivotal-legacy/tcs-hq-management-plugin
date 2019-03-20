@@ -93,8 +93,8 @@ modify the tests more.
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/src/dojox/trunk/jq.js
-http://svn.dojotoolkit.org/src/dojox/trunk/jq/*
+https://svn.dojotoolkit.org/src/dojox/trunk/jq.js
+https://svn.dojotoolkit.org/src/dojox/trunk/jq/*
 
 Install into the following directory structure:
 /dojox/jq.js

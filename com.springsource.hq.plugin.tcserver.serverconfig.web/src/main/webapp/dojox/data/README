@@ -33,7 +33,7 @@ and dojox.data.dom(deprecated) and the D.O.H. unit test framework
 -------------------------------------------------------------------------------
 Documentation:
 
-See the Dojo API tool (http://dojotoolkit.org/api)
+See the Dojo API tool (https://dojotoolkit.org/api)
 -------------------------------------------------------------------------------
 Contributions:
 
@@ -47,7 +47,7 @@ provided datastores as stable as possible.
 Installation instructions
 
 Grab the following from the Dojo SVN Repository:
-http://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/data/*
+https://svn.dojotoolkit.org/var/src/dojo/dojox/trunk/data/*
 
 Install into the following directory structure:
 /dojox/data/

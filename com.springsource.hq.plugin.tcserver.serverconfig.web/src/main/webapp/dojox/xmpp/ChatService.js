@@ -1,14 +1,14 @@
 /*
 	Copyright (c) 2004-2010, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
+	see: https://dojotoolkit.org/license for details
 */
 
 
 if(!dojo._hasResource["dojox.xmpp.ChatService"]){
 dojo._hasResource["dojox.xmpp.ChatService"]=true;
 dojo.provide("dojox.xmpp.ChatService");
-dojox.xmpp.chat={CHAT_STATE_NS:"http://jabber.org/protocol/chatstates",ACTIVE_STATE:"active",COMPOSING_STATE:"composing",INACTIVE_STATE:"inactive",PAUSED_STATE:"paused",GONE_STATE:"gone"};
+dojox.xmpp.chat={CHAT_STATE_NS:"https://jabber.org/protocol/chatstates",ACTIVE_STATE:"active",COMPOSING_STATE:"composing",INACTIVE_STATE:"inactive",PAUSED_STATE:"paused",GONE_STATE:"gone"};
 dojo.declare("dojox.xmpp.ChatService",null,{state:"",constructor:function(){
 this.state="";
 this.chatid=Math.round(Math.random()*1000000000000000);
