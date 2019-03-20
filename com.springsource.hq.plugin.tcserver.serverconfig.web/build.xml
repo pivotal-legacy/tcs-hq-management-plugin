@@ -65,7 +65,7 @@
 
 	<target name="dojo.download">
 		<mkdir dir="${target.dir}"/>
-		<get src="http://download.dojotoolkit.org/release-${dojo.version}/dojo-release-${dojo.version}-src.zip"
+		<get src="https://download.dojotoolkit.org/release-${dojo.version}/dojo-release-${dojo.version}-src.zip"
 				dest="${target.dir}" usetimestamp="true" verbose="true"/>
 		<path id="dojo.path">
 			<pathelement location="${target.dir}/dojo-release-${dojo.version}-src.zip"/>
